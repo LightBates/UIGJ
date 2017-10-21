@@ -116,9 +116,9 @@ label TwoGlens:
                     "They freeze at the sight of it, eyes wide with terror."
                 else:
                     "You kneel by the struggling Glen, and draw the knife. They freeze at the sight of it, eyes wide with terror."
-                "As you cut the struggling Glen’s bonds, they stare at the other, who is becoming hard to understand."
-                G "“It’s not my fault! They gave me to Mother! Harper, I love you!”"
-                H "“Let’s go, Glen.”"
+                "As you cut the struggling Glen’s bonds, they stare at the other, who is becoming increasingly desperate."
+                G "“It wasn’t not my fault! It was them! They switched us! Harper no, I love you!”"
+                H "You’ve made your choice. “Let’s go, Glen.”"
                 G "“Thank you. Thank you, Harper. I promise. I promise I won’t ever leave you again.”"
                 "Glen hugs you, tighter than you ever remember. They smell of the forest."
 
