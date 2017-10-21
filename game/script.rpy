@@ -3,9 +3,13 @@
 # Declare Background Images
 image bgAct1 = "/images/Backgrounds/act_1_bg.png"
 
+# Declare Sprites
+image harper = "/images/Characters/harper_sprite.png"
+
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
+define F = Character("Flame")
 define H = Character("Harper")
 define G = Character("Glen")
 define Cr = Character("Crowd")
@@ -36,7 +40,7 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    scene bgAct1
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -50,6 +54,7 @@ label start:
     "You can’t remember, exactly, whose idea it first was to come along the path, but it hardly matters as you get nearer and nearer the creeping fringe."
     "You stop just outside it, turn to look at one another, just to be sure."
     G "“What’re you waiting for?”"
+    show harper at right
     H "“You know we’re not supposed to go in there, Glen. You know what they say is inside.”"
     G "“When has that ever stopped us before?”"
     menu:
