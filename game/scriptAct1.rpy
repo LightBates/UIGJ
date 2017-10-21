@@ -3,8 +3,11 @@ label Treasure:
     scene bgAct1
     $ Act1Scenes.pop(nex)
     "Another clearing opened before them. You walk toward the center, looking for another path out."
+    show glen at left
     G "“Harper, someone’s coming!” Glen whispers, pulling your sleeve. Rustling interrupts the soft silence of the forest."
+    show harper at right
     H "“Did they follow us?” you whisper back, turning to the sound."
+    show lost at center
     "A dark figure emerges from the brush, staggering. Glen gasps."
     G "“Harper, I think they’re hurt!”"
     "It’s true. It’s a man, or something that looks like one. He’s covered in dirt, and can barely walk."
@@ -19,22 +22,32 @@ label Treasure:
             $ empathy -= 1
             $ renpy.notify("Pacifism +1\nApathy +1")
             H "“Hurry.” You get closer, trying not to dirty yourselves too badly as the two of you lift his arms onto your shoulders."
+            hide lost
             H "“In the bushes.” You ease him down into the shade of the bushes, while Glen pushes the dirt around with their boot, trying to hide the man’s footprints."
+            hide glen
+            # show crowd left
             "A crowd emerges from the brush. Their eyes fall upon you."
             Cr "“Where is our treasure?” they ask as one."
             H "“Not here,” you respond evenly, trying to keep your voice from shaking."
             "They spread through the clearing in an elegant wave of shapes, but do not see him."
+            # show crowd at left:
+                #linear .5 right
+            show glen left
             G "“What are you going to do if you find him?” Glen asks."
             "They level their gazes on Glen, who you shoot a glare. You hadn’t said it was a “him”."
-            Cr "They respond nonetheless. “We will reclaim what is ours.” Without another word, they return between the branches of the forest."
+            Cr "They respond nonetheless. “We will reclaim what is ours.”"
+            # hide crowd
+            "Without another word, they return between the branches of the forest."
             G "Glen tugs at your sleeve, frozen until now. “We have to get out of here, Harper. C’mon, please.”"
             "You look back at the shadow under the bush, as Glen drags you away. The man begins to cry, and a baby’s voice joins his."
+            
 
         "Protect him":
             $ pacifism -= 1
             $ empathy += 1
             $ renpy.notify("Violence +1\nEmpathy +1")
             "You draw your knife, as Glen eases him to the ground behind you."
+            hide lost
             "A crowd emerges from the brush. Their eyes fall upon you, and then him."
             Cr "“Step aside. He has stolen from us, and must be punished.”"
             G "“What has he stolen?”"
@@ -55,6 +68,7 @@ label Treasure:
             $ renpy.notify("Violence +1\nApathy +1")
             "As he collapses onto the ground before you, a crowd emerges from the brush. Their eyes fall upon him, and their movements are swift."
             "They take his treasure, and he screams like a man dying. It rings in your ears, familiar."
+            hide lost
             "As they vanish into the shadows, you see that they did not kill him. But you see in his downward eyes that he has nothing more to live for."
             "You take Glen’s hand and head deeper into the woods."
             

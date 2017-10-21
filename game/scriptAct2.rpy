@@ -205,6 +205,47 @@ label Boa:
     "Glen reaches out and touches your shoulder."
     if $ HasBaby:
         "The baby coos in Glen’s arms, which calms some of the tension in their shoulders."
+    "The snapping sound of breaking foliage calls your attention back to the path in front of you."
+    "A stranger staggers from the brush, hunched over, scraped and bruised and -- oh."
+    "A snake, sinuous and monumental, twists around his body, wound tight."
+    "Squeezing."
+    "You see now that one of the stranger’s arms hangs limp, a battered skin sack of crunched bones."
+    "Your stomach roils. Glen yelps and staggers behind you."
+    S "“Please!” the stranger wails."
+    S "“Help me, help me. I beg of you!”"
+    "The snake undulates and its prisoner howls. Glen whimpers at your back."
+    
+    menu:
+        "Attempt to remove the snake":
+            $ pacifism += 1
+            $ empathy += 1
+            $ renpy.notify("Pacifism +1\nEmpath +1")
+            
+        "Attempt to kill the snake":
+            
+            
+        "Flee with Glen":
+
+1. Attempt to remove the snake. (empathy nonviolence)
+2. Attempt to kill the snake. (empathy violence)
+3. Flee with Glen. (apathy empathy)
+
+1. Attempt to remove the snake.
+
+You yank a branch from the underbrush and test its heft, brandishing it before you as you approach the stranger.
+
+h “Hold still!”
+
+The stranger warbles and squirms. You attempt to wedge the branch between his body and the snake’s, but merely succeed in prodding the beast. 
+
+g “No!” Glen shouts.
+
+The snake hisses and snaps its jowls at you. You stagger back  just in time -- just in time to watch those fangs sink deep into the stranger’s throat. The pierce of his scream pins you in place on the forest floor.
+
+g “Harper!” 
+
+Glen scurries to your side, yanks you to your trembling feet, and pulls you by the hand. Away, away from the blood, the sound of tearing flesh.
+
     
 
     
