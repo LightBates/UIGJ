@@ -1,5 +1,6 @@
 label Flame: 
     $ Act2Scenes.pop(nex)
+    scene bgAct3
     "It’s dark, so dark in the center of the forest."
     "Here the things that creep and call do so on the periphery, under cover."
     "It’s a place for nocturnal things, no matter the time. Their eyes glint and their wings flutter and the weight of them is everywhere."
@@ -33,8 +34,8 @@ label Flame:
     
     menu:
         "Let it out":
-            $ empathy += 1
             $ pacisfism -= 1
+            $ empathy += 1            
             $ renpy.notify("Violence +1\nEmpathy +1")
             "You can’t stand the way it looks at you, the way it aches to be set free."
             "You can’t stand the idea of being the same, stuck out there in the darkness, interminably, waiting for someone to take pity and help."
@@ -50,8 +51,8 @@ label Flame:
             "As you burn."
             
         "Walk away":
-            $ empathy -= 1
             $ pacisfism += 1
+            $ empathy -= 1            
             $ renpy.notify("Pacifism +1\nApathy +1")
             "The dark is better, it must be better."
             "This thing is just like all those other creatures, begging you to feed into the chaos, the suffering, the eternal turn of this wretched wheel."

@@ -2,6 +2,8 @@
 
 # Declare Background Images
 image bgAct1 = "/images/Backgrounds/act_1_bg.png"
+image bgAct2 = "/images/Backgrounds/act_2_bg.png"
+image bgAct3 = "/images/Backgrounds/act_2_bg.png"
 
 # Declare Sprites
 image harper = "/images/Characters/harper_sprite.png"
@@ -26,7 +28,7 @@ label start:
     
     $ Act1Scenes = ["Treasure", "Merchant", "BirchBox"]
     $ Act2Scenes = ["InTheTree"]
-    $ Act3Scenes = []
+    $ Act3Scenes = ["Flame"]
     
     #Flags
     $ HasBaby = False

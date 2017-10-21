@@ -1,5 +1,6 @@
 label InTheTree:
     $ Act2Scenes.pop(nex)
+    scene bgAct2
     "The forest runs deeper than any you’ve entered. For a moment, you imagine weaving through its gnarled roots and branches forever."
     G "“Are we lost?” Glen asks as you push the thoughts from your mind."
     H "“No,” you respond firmly. “We just haven’t found our way yet.”"
