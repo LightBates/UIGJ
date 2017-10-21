@@ -8,7 +8,7 @@ label Treasure:
     show harper at right
     H "“Did they follow us?” you whisper back, turning to the sound."
     show lost at center
-    "A dark figure emerges from the brush, staggering. Glen gasps."
+    "A gaunt figure emerges from the brush, staggering. Glen gasps."
     G "“Harper, I think they’re hurt!”"
     "It’s true. It’s a man, or something that looks like one. He’s covered in dirt, and can barely walk."
     L "“H...Help me, th...they’ll find me.”"
@@ -21,7 +21,7 @@ label Treasure:
             $ pacifism += 1
             $ empathy -= 1
             $ renpy.notify("Pacifism +1\nApathy +1")
-            H "“Hurry.” You get closer, trying not to dirty yourselves too badly as the two of you lift his arms onto your shoulders."
+            H "“Hurry.” You get closer, taking care not to hurt him as the two of you lift his arms onto your shoulders."
             hide lost
             H "“In the bushes.” You ease him down into the shade of the bushes, while Glen pushes the dirt around with their boot, trying to hide the man’s footprints."
             hide glen
