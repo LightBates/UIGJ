@@ -85,7 +85,7 @@ label 2Glens:
     else:
         "The right Glen starts to cry, tears falling onto the fallen leaves below them."
     if TwiceGiven = true:
-        $ pacisfism -= 1
+        $ pacisfism -= 2
         $ empathy -= 1            
         $ renpy.notify("Violence +2\nApathy +1")
         "Before you can act, the terrible rustling returns. The figures return from the forest."
@@ -98,7 +98,7 @@ label 2Glens:
         menu:
             "Free crying Glen":
                 $ pacisfism += 1
-                $ empathy += 1            
+                $ empathy += 2            
                 $ renpy.notify("Pacifism +1\nEmpathy +2")
                 if HasBaby = true:
                     "You walk slowly to the crying Glen, and shift the baby into one arm as the other hand draws the knife. You cut the vines."
@@ -109,7 +109,7 @@ label 2Glens:
                 "You turn your back on them."
 
             "Free struggling Glen":
-                $ pacisfism -= 1
+                $ pacisfism -= 2
                 $ empathy += 1            
                 $ renpy.notify("Violence +2\nEmpathy +1")
                 G "As you step toward the struggling Glen, the other begins to sob. “Please. Please, Harper. Don’t do this.”"
