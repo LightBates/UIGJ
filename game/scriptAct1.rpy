@@ -60,8 +60,70 @@ label Treasure:
     
 label Merchant:
     $ Act1Scenes.pop(nex)
+    "It starts as a tinkling, a clatter of glass and jangle of charms. The sound is familiar to those who trade in wares, traveling the dirt roads to larger cities with the hope of a livelihood."
+    "Harper and Glen know it well, always excited for the promise of something new, something never before seen drifting into their sphere."
+    "The creak of wheels and heaving, humid groan of something strange signal an approach."
+    "It's—"
+    "There’s—"
+    "He rounds a gnarly trunk, cart almost overturning, before tipping his gaze up and coming to a stop."
+    M "“Aha! Oh my. Look at the heft of you two.”"
+    "His gaze is more than assessing, it scores against your skin as the beady black flit from you to Glen and back again. "
+    G "Glen steps to him, immediate, bouncing as she steps to his stock."
+    G "“At us? At you! What a thing, what a wonderful, whimsical thing.”"
+    "The merchant grins, teeth— oh the teeth."
+    M "“Come, come and look. More I have, if your eye is for such things.”"
+    "He stands aside, gestures his arms across the glowing bottles, stringed baubles, powders and liquids and… meats."
+    "Something shifts."
+    M "“I trade in many things, many things. Find something you fancy, please.”"
     
+    menu:
+        "Step closer":
+            "You move to be at Glen’s side, bumping shoulders as you peruse."
+            
+        "Stay back":
+            "You step so slightly back, watching for the Merchant to track your anxious steps."
+    "Glen’s eyes light up as they spot something you don’t, plunging their hands into the cart before reeling back with a yelp. Blood, bright and wet, seeps down a single finger, blackens, and breaks off."
+    G "“What was that, what did you do?”"
+    M "“An even trade! Your delight costs but a bit of blood. Good business, great business. Thank you!”"
+    "The merchant takes a low bow and then snuffles as he straightens out, moving to retake the front of his cart and take to the road." 
+    H "“Wait! Sir, you never told us the terms. This is unfair.”"
+    "The merchant squints his eyes, sets his jaw, smacks his lips, once."
+    M "“If you’re unhappy with your gains, perhaps you should barter better— next time.”"
+    "The merchant squares himself towards you, fingers flexing, daring for a challenge."
     
+    menu:
+        "*Brandish your knife* If blood for blood is the deal you’re wanting, I’d like my fair share.":
+            "The merchant squeals, nostrils flaring, hands raising up as it shuffles back, stumbling over its own feet as you advance."
+        
+        "*Brandish your knife* Fair is fair, let Glen choose to make the sale.":
+            M "“There are no returns. Your friend can make another deal, only this I can do.”" 
+            "Glen keeps an eye on you, as you keep an eye on the merchant, but steps forward nonetheless. This time, their movements are more deliberate, measured, concise."
+            "They take their time as they examine every item, hands hovering before making their move."
+            "A sack, piecemeal marred with too large stitching. It jerks and struggles as its hefted. A low, lethargic wail is muffled by the confines."
+            "As soon as the bag clears the cart, the merchant smiles, raspy laugh reverberating around the forest floor as he starts to fade away."
+            M "“A price is paid then. Good business. Good, good business.”"
+            "He’s gone. Before you can decide whether or not to make another move, he’s gone. His wares, his cart. All that’s left, a sack that Glen opens, to the cries of a child."
+            $ HasBaby = True
+            
+        "We should go, Glen. A bit of blood is hardly worth a fight.":
+            "Glen clutches their hand, though there’s no longer a wound, and steps aside to let the merchant pass, glaring as he does."
+            "When he passes, that gaze is turned to you. Glen doesn’t speak again, but this time, as they move forward, they go without you. After a moment’s hesitation, you run after begging after a slower pace."
+        
+        "Take mine instead then, now that we know the terms.":
+            M "“There are no returns. Your friend can make another deal, only this I can do.”"
+            H "“My blood for Glen’s blood then. You own it now, I assume it’s for sale. That is what I want, and what I am willing to pay.”"
+            "The merchant stops, snorts, lips curling and skin rankling. It makes manic giggles, angry grunts, hands dragging as it starts to pace." 
+            M "“Tricks, tricks! You’re dirty, little pilfer-things.”"
+            "You draw your knife and slit your thumb as the merchant shrieks. The blood blots the wagon, while he stamps his feet."
+            "Glen gasps as a single, fat drop of blood falls from the sky and splashes on their face." 
+            M "“Your deal then, take it and go. Go, go, go!”"
+            "You take Glen’s hand and pull them ever deeper, not daring to look behind as the merchant roars and trees shake and the path behind fades away."
+        
+        "Do Nothing":
+            "Glen clutches their hand, though there’s no longer a wound, and steps aside to let the merchant pass, glaring as he does."
+            G "“Let him go then, I’ve got little use for such a silly thing.”"
+            "The merchant snorts and snuffles as he passes, cart creaking again as it threatens to tip along the gnarled path. Something inside a bag wriggles and whines."
+
     $ nex = renpy.random.randint(0, len(Act2Scenes) - 1)
     $ renpy.jump(Act2Scenes[nex])
     

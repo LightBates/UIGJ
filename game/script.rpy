@@ -8,6 +8,7 @@ define G = Character("Glen")
 define C = Character("Crowd")
 define L = Character("Lost")
 define B = Character("Baby")
+define M = Character("Merchant")
 
 
 
@@ -18,6 +19,10 @@ label start:
     $ Act1Scenes = ["Treasure", "Merchant", "BirchBox"]
     $ Act2Scenes = ["InTheTree"]
     $ Act3Scenes = []
+    
+    #Flags
+    $ HasBaby = False
+    
     # empathy++ = caring for others, empathy-- = apathy
     $ empathy = int(0)
     
