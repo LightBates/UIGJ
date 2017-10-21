@@ -5,6 +5,9 @@
 
 define H = Character("Harper")
 define G = Character("Glen")
+define C = Character("Crowd")
+define L = Character("Lost")
+define B = Character("Baby")
 
 
 
