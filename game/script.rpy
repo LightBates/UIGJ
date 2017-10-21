@@ -14,8 +14,12 @@ define B = Character("Baby")
 # The game starts here.
 
 label start:
+    
+    $ Act1Scenes = ["Treasure", "Merchant", "BirchBox"]
+    $ Act2Scenes = []
+    $ Act3Scenes = []
     # empathy++ = caring for others, empathy-- = apathy
-    $ empathy = 0
+    $ empathy = int(0)
     
     # pacifism++ = nonviolence, pacifism-- = violence
     $ pacifism = 0
@@ -32,11 +36,11 @@ label start:
 
     # These display lines of dialogue.
 
-    "There’s a forest, at the edge of the village. A pebble path along a narrow creek leads down to tall, verdant trees."
-    "It’s there Harper and Glen walk, weaving in and around another."
-    "Inseparable, the two, in all manners, but especially adventure."
-    "They can’t remember exactly whose idea it was to head down first, but it hardly mattered as they walked nearer and nearer the creeping fringe."
-    "At the edge of their known world, the border between the village and the outside, they stop to look at one another. To be sure."
+    "You walk down a pebble path, along a narrow creek, leading down to tall, verdant trees. "
+    "here’s a forest at the edge of the village, a border between the village and the outside. "
+    "Glen walks beside you, at your side for all things, but especially adventure, weaving in and around your own, meandering trail."
+    "You can’t remember, exactly, whose idea it first was to come along the path, but it hardly matters as you get nearer and nearer the creeping fringe."
+    "You stop just outside it, turn to look at one another, just to be sure."
     G "What’re you waiting for?"
     H "You know we’re not supposed to go in there, Glen. You know what they say is inside."
     G "When has that ever stopped us before?"
@@ -54,11 +58,15 @@ label start:
             $ renpy.notify("Violence +1")
             H "I suppose we're safe no matter."
     "Glen smiles at you, that smile that’s so sure the grass is always greener, and takes your hand."
-    "You believe there might be something better out there, something brighter, something magic. Birds chirping, water running, the creak of a cart somewhere far down along the road—"
-    "it all cuts out as you step beyond and into— "
-    jump TheForest
+    "You believe there might be something better out there, something brighter, something magic."
+    "Birds chirping, water running, the creak of a cart somewhere far down along the road-"
+    "it all cuts out as you step beyond and into the forest"
+    $ nex = renpy.random.randint(0, len(Act1Scenes) - 1)
+    $ renpy.jump(Act1Scenes[nex])
     
 label TheForest:
+    $ Act1Scenes.pop(nex)
     show text "THE FOREST" at truecenter
     "To Be Continued"
     return
+    
