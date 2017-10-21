@@ -93,9 +93,15 @@ label Merchant:
     
     menu:
         "*Brandish your knife* If blood for blood is the deal you’re wanting, I’d like my fair share.":
+            $ pacifism -= 1
+            $ empathy -= 1
+            $ renpy.notify("Violence +1\nApathy +1")
             "The merchant squeals, nostrils flaring, hands raising up as it shuffles back, stumbling over its own feet as you advance."
         
         "*Brandish your knife* Fair is fair, let Glen choose to make the sale.":
+            $ pacifism -= 1
+            $ empathy += 1
+            $ renpy.notify("Violence +1\nEmpathy +1")
             M "“There are no returns. Your friend can make another deal, only this I can do.”" 
             "Glen keeps an eye on you, as you keep an eye on the merchant, but steps forward nonetheless. This time, their movements are more deliberate, measured, concise."
             "They take their time as they examine every item, hands hovering before making their move."
@@ -106,10 +112,16 @@ label Merchant:
             $ HasBaby = True
             
         "We should go, Glen. A bit of blood is hardly worth a fight.":
+            $ pacifism += 1
+            $ empathy -= 1
+            $ renpy.notify("Pacifism +1\nApathy +1")
             "Glen clutches their hand, though there’s no longer a wound, and steps aside to let the merchant pass, glaring as he does."
             "When he passes, that gaze is turned to you. Glen doesn’t speak again, but this time, as they move forward, they go without you. After a moment’s hesitation, you run after begging after a slower pace."
         
         "Take mine instead then, now that we know the terms.":
+            $ pacifism += 1
+            $ empathy += 1
+            $ renpy.notify("Pacifism +1\nEmpathy +1")
             M "“There are no returns. Your friend can make another deal, only this I can do.”"
             H "“My blood for Glen’s blood then. You own it now, I assume it’s for sale. That is what I want, and what I am willing to pay.”"
             "The merchant stops, snorts, lips curling and skin rankling. It makes manic giggles, angry grunts, hands dragging as it starts to pace." 
