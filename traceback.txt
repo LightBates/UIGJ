@@ -1,0 +1,72 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/screens.rpy", line 1245, in execute
+    screen notify(message):
+  File "game/screens.rpy", line 1245, in execute
+    screen notify(message):
+  File "game/screens.rpy", line 1250, in execute
+    frame at notify_appear:
+  File "game/screens.rpy", line 1251, in execute
+    text message
+NameError: Name '$ pacifism' is not defined.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "lib/windows-i686/script.rpyc", line 52, in script
+  File "D:\Program Files\RenPy\renpy\ast.py", line 613, in execute
+    renpy.exports.say(who, what, interact=self.interact)
+  File "D:\Program Files\RenPy\renpy\exports.py", line 1147, in say
+    who(what, interact=interact)
+  File "D:\Program Files\RenPy\renpy\character.py", line 877, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "D:\Program Files\RenPy\renpy\character.py", line 716, in do_display
+    **display_args)
+  File "D:\Program Files\RenPy\renpy\character.py", line 508, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "D:\Program Files\RenPy\renpy\ui.py", line 285, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\Program Files\RenPy\renpy\display\core.py", line 2526, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "D:\Program Files\RenPy\renpy\display\core.py", line 2793, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "D:\Program Files\RenPy\renpy\display\core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "D:\Program Files\RenPy\renpy\display\core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "D:\Program Files\RenPy\renpy\display\core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "D:\Program Files\RenPy\renpy\display\screen.py", line 399, in visit_all
+    callback(self)
+  File "D:\Program Files\RenPy\renpy\display\core.py", line 2793, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "D:\Program Files\RenPy\renpy\display\screen.py", line 409, in per_interact
+    self.update()
+  File "D:\Program Files\RenPy\renpy\display\screen.py", line 578, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 1245, in execute
+    screen notify(message):
+  File "game/screens.rpy", line 1245, in execute
+    screen notify(message):
+  File "game/screens.rpy", line 1250, in execute
+    frame at notify_appear:
+  File "game/screens.rpy", line 1251, in execute
+    text message
+  File "D:\Program Files\RenPy\renpy\text\text.py", line 1328, in __init__
+    self.set_text(text, scope, substitute)
+  File "D:\Program Files\RenPy\renpy\text\text.py", line 1426, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute)
+  File "D:\Program Files\RenPy\renpy\substitutions.py", line 232, in substitute
+    s = formatter.vformat(s, (), kwargs)
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 563, in vformat
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 585, in _vformat
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 646, in get_field
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 605, in get_value
+  File "D:\Program Files\RenPy\renpy\substitutions.py", line 194, in __getitem__
+    raise NameError("Name '{}' is not defined.".format(key))
+NameError: Name '$ pacifism' is not defined.
+
+Windows-8-6.2.9200
+Ren'Py 6.99.12.4.2187
+Salty Knives 1.0

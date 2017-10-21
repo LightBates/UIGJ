@@ -1,0 +1,1 @@
+label Act1Scene:
