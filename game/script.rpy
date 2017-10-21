@@ -16,7 +16,7 @@ define B = Character("Baby")
 label start:
     
     $ Act1Scenes = ["Treasure", "Merchant", "BirchBox"]
-    $ Act2Scenes = []
+    $ Act2Scenes = ["InTheTree"]
     $ Act3Scenes = []
     # empathy++ = caring for others, empathy-- = apathy
     $ empathy = int(0)
@@ -37,7 +37,7 @@ label start:
     # These display lines of dialogue.
 
     "You walk down a pebble path, along a narrow creek, leading down to tall, verdant trees. "
-    "here’s a forest at the edge of the village, a border between the village and the outside. "
+    "There’s a forest at the edge of the village, a border between the village and the outside. "
     "Glen walks beside you, at your side for all things, but especially adventure, weaving in and around your own, meandering trail."
     "You can’t remember, exactly, whose idea it first was to come along the path, but it hardly matters as you get nearer and nearer the creeping fringe."
     "You stop just outside it, turn to look at one another, just to be sure."

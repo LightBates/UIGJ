@@ -1,6 +1,6 @@
-label Act1_Treasure
+label Treasure:
  # These display lines of dialogue.
-
+    $ Act1Scenes.pop(nex)
     "Another clearing opened before them. You walk toward the center, looking for another path out."
     G "“Harper, someone’s coming!” Glen whispers, pulling your sleeve. Rustling interrupts the soft silence of the forest."
     H "“Did they follow us?” you whisper back, turning to the sound."
@@ -14,9 +14,8 @@ label Act1_Treasure
     menu:
         "Hide him":
             $ pacifism += 1
-            $ renpy.notify("Nonviolence +1")
             $ empathy -= 1
-            $ renpy.notify("Apathy +1")
+            $ renpy.notify("Pacifism +1\nApathy +1")
             H "“Hurry.” You get closer, trying not to dirty yourselves too badly as the two of you lift his arms onto your shoulders."
             H "“In the bushes.” You ease him down into the shade of the bushes, while Glen pushes the dirt around with their boot, trying to hide the man’s footprints."
             "A crowd emerges from the brush. Their eyes fall upon you."
@@ -31,9 +30,8 @@ label Act1_Treasure
 
         "Protect him":
             $ pacifism -= 1
-            $ renpy.notify("Violence +1")
             $ empathy += 1
-            $ renpy.notify("Empathy +1")
+            $ renpy.notify("Violence +1\nEmpathy +1")
             "You draw your knife, as Glen eases him to the ground behind you."
             "A crowd emerges from the brush. Their eyes fall upon you, and then him."
             C "“Step aside. He has stolen from us, and must be punished.”"
@@ -46,10 +44,32 @@ label Act1_Treasure
             
         "Wait and see":
             $ pacifism -= 1
-            $ renpy.notify("Violence +1")
             $ empathy -= 1
-            $ renpy.notify("Apathy +1")
+            $ renpy.notify("Violence +1\nApathy +1")
             "As he collapses onto the ground before you, a crowd emerges from the brush. Their eyes fall upon him, and their movements are swift."
             "They take his treasure, and he screams like a man dying. It rings in your ears, familiar."
             "As they vanish into the shadows, you see that they did not kill him. But you see in his downward eyes that he has nothing more to live for."
             "You take Glen’s hand and head deeper into the woods."
+            
+    $ nex = renpy.random.randint(0, len(Act2Scenes) - 1)
+    $ renpy.jump(Act2Scenes[nex])
+    
+    
+    
+    
+label Merchant:
+    $ Act1Scenes.pop(nex)
+    
+    
+    $ nex = renpy.random.randint(0, len(Act2Scenes) - 1)
+    $ renpy.jump(Act2Scenes[nex])
+    
+    
+    
+    
+label BirchBox:
+    $ Act1Scenes.pop(nex)
+    
+    
+    $ nex = renpy.random.randint(0, len(Act2Scenes) - 1)
+    $ renpy.jump(Act2Scenes[nex])

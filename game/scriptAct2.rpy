@@ -1,4 +1,5 @@
-label Act2_InTheTree:
+label InTheTree:
+    $ Act2Scenes.pop(nex)
     "The forest runs deeper than any you’ve entered. For a moment, you imagine weaving through its gnarled roots and branches forever."
     G "“Are we lost?” Glen asks as you push the thoughts from your mind."
     H "“No,” you respond firmly. “We just haven’t found our way yet.”"
@@ -15,9 +16,8 @@ label Act2_InTheTree:
     menu:
         "Cut the rope":
             $ pacifism -= 1
-            $ renpy.notify("Violence +1")
             $ empathy -= 1
-            $ renpy.notify("Apathy +1")
+            $ renpy.notify("Violence +1\nApathy +1")
             "You pull the knife from your belt. Specks of light between the leaves reflect from its blade."
             "Glen backs away, and you begin to saw at the rope, and watch as the weight it holds starts to pull it apart."
             G "“Harper, it’ll be fine, just come on.”"
@@ -25,9 +25,8 @@ label Act2_InTheTree:
             "Something thuds in the woods behind you."
         "Climb up the tree":
             $ pacifism += 1
-            $ renpy.notify("Nonviolence +1")
             $ empathy += 1
-            $ renpy.notify("Empathy +1")
+            $ renpy.notify("Pacifism +1\nEmpathy +1")
             G "“Harper...” You grasp the lowest branch of the tree, and begin to hoist yourself up."
             H "“I’m going to see what it is.”"
             "The two lights from the canopy stare back at you from within a shadow that looms near a twisted figure, tied with rope."
@@ -38,10 +37,12 @@ label Act2_InTheTree:
             "You cut the ropes, carefully."
         "Leave with Glen":
             $ pacifism -= 1
-            $ renpy.notify("Violence +1")
             $ empathy += 1
-            $ renpy.notify("Empathy +1")
+            $ renpy.notify("Violence +1\nEmpathy +1")
             H "“...Okay. Okay. We’ll leave.”"
             "You turn to go, giving the tree one last look."
             "The two of you walk deeper into the forest, and ignore the thump behind you."
+            
+    $ nex = renpy.random.randint(0, len(Act3Scenes) - 1)
+    $ renpy.jump(Act3Scenes[nex])
 
