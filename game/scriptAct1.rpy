@@ -167,6 +167,69 @@ label BirchBox:
     scene bgAct1
     $ Act1Scenes.pop(nex)
     
+    "Glen, arms akimbo, zips between trees, their steps so buoyant and sure that it looks more like floating than running."
+    "Of course, you aren’t far behind – where Glen goes, you follow, though you feel much less effervescent."
+    "The forest composes a song of groaning branches and snapping twigs, noisy in a too-quiet way, which Glen and their bubbling laughter pay little mind."
+    H "“Don’t you think we should be more quiet?” you whisper."
+    "The dissonance between Glen’s bright laugh and the wood’s low scuttle makes you uneasy."
+    G "“Honestly, Harper, you worry too much!”"
+    "A large boulder, towering under its mossy blanket, catches Glen’s eye and they breeze towards it."
+    "You drag your palm against the gnarled bark of an old, stooping oak tree, circling the heft of its circumference while you try to ease the roiling of your stomach."
+    "Your hand catches on a knot – no, a hollow – in the tree."
+    "You pause and peer inside."
+    "A box balances precariously within."
+    "Its deliberate placement sparks your curiosity, and you can’t resist; with careful hands, you lift the lid away."
+    "The contents wring a gasp from your windpipe."
+    "An infant, diminutive and doughy, bare and bluish with cold, slumbers inside the box."
+
+    menu:
+        "Take the baby":
+            $ pacifism += 1
+            $ empathy += 1
+            $ renpy.notify("Pacifism +1\nEmpathy +1"
+            "You lift the child from the box, gather it close to your chest, and rock it gently."
+            "Already, more color rises to its cheeks. The baby curls its body against you and your warmth, and you murmur to it."
+            H "“I’ve got you. You’re safe now. I have you.”"
+            "Glen’s footsteps approach. They hum a tune that tickles at your memory, but you can’t quite place it. You turn."
+            "Glen stops short, gaze wide and watery on the infant you cradle."
+            G "“Is that…?”"
+            "You nod."
+            "Glen shakes their head."
+            G "“Who would abandon a baby in the woods?”"
+            H "“Not I,” you say with a wry smile."
+            
+        "Leave the baby":
+            $ pacifism -= 1
+            $ empathy -= 1
+            $ renpy.notify("Violence +1\nApathy +1"
+            "You glance back at Glen, finding them still caught in thrall of the boulder and its climbing potential."
+            "You look back into the box, half-hoping to find the baby transformed into treasure or wool or something - anything - else."
+            "You cannot care for this child. You have nothing for it. No milk, no clothing, no affection."
+            "Why, it’s already teetering on the edge."
+            "Taking it along with you would not only be futile, but it could slow you, make your more vulnerable in the deeper forest."
+            "It is better, you decide, to grant this creature rest."
+            "..."
+            "You return the lid to the box."
+            H "“Come on, Glen. We should keep moving.”"
+        
+        "Let Glen decide":
+            $ pacifism += 1
+            $ empathy -= 1
+            $ renpy.notify("Pacifism +1\nApathy +1"
+            H "“Glen!” you call. “Glen, come see this.”"
+            "The baby stirs. Glen climbs down from their perch on the boulder and returns to your side."
+            "They breathe a noise - a whimper - in shock and sympathy."
+            G "“Is that…?”"
+            "You nod and fold your arms, looking away from the child as it begins to wriggle."
+            G "“What should we do, Harper?”"
+            "You shrug."
+            H "“I don’t know,” you mumble."
+            H "“You decide.”"
+            "It only takes Glen a few moments."
+            "They lift the baby from the box with shaking hands, scraping their knuckles on the edge of the hollow as they angle the child out."
+            "The baby offers a watery cry. Glen tucks it close to their chest and looks at you with wide eyes."
+            G "“We can’t just leave her.”"
+            "You shrug again."    
     
     $ nex = renpy.random.randint(0, len(Act2Scenes) - 1)
     $ renpy.jump(Act2Scenes[nex])
