@@ -5,7 +5,7 @@ label InTheTree:
     G "“Are we lost?” Glen asks as you push the thoughts from your mind."
     H "“No,” you respond firmly. “We just haven’t found our way yet.”"
     "A wail comes from a break in the leaves above you, but all you can see is black."
-    if HasBaby = true:
+    if HasBaby:
         "“W-What was that?” Glen asks, holding the baby closer. “It sounded like a monster.”"
     else:
         G "“W-What was that?” Glen asks, latching onto your sleeve. “It sounded like a monster.”"
@@ -27,7 +27,7 @@ label InTheTree:
             "You pull the knife from your belt. Specks of light between the leaves reflect from its blade."
             "Glen backs away, and you begin to saw at the rope, and watch as the weight it holds starts to pull it apart."
             G "“Harper, it’ll be fine, just come on.”"
-            if HasBaby = true:
+            if HasBaby:
                 "Glen smiles, relieved, and coos softly at the baby as you continue into the woods. Something thuds behind you."
             else:
                 "You step away from the tree, and don’t turn to look back. Glen holds out a trembling hand, and you take it until the shaking stops."
@@ -45,7 +45,7 @@ label InTheTree:
             "The shadow dissipates, hit by specks of light filtered through leaves and perfected by the knife’s perfect edge."
             "You cut the ropes, carefully."
         "Leave with Glen":
-            if HasBaby = true:
+            if HasBaby:
                 $ pacifism -= 1
                 $ empathy += 2
                 $ renpy.notify("Violence +1\nEmpathy +2")
@@ -100,83 +100,11 @@ label Voices:
     
     menu:
         "Step into the cave":
-            "The air turns musty, the fresh damp decaying so quickly you can taste it."
-            H "“Mother?”"
-            H "“Mother, please.”"
-            "You wait in the dark for a reply, for the continuation of her song. You don’t remember when it stopped."
-            "Sometime between the outside and now and you wanted it to stop, but now there’s just so much empty."
-            "It’s a void that wants to grow, that erodes at you, breaking off bits and pieces to carry away downstream. Just so much silt."
-            "And then? And then."
-            C "“Harper, sweet? Oh dear, oh dear. You’ve come to see your mother-dust.”"
-            C "“She’s waited for you oh, so long. Poor thing, sweet thing, sad thing. She wept oh so long, hoping— only— to see you.”"
-            G "“Stop. Please don’t. Stop!” "
-            "You turn wildly, thrashing in the empty to find the source of the echoing call."
-            "It slides along the walls, slithers on the floor, drips slowly into your ear."
-            H "“What do you want?”"
-            C "“Oh, stay with me. Sit and stay awhile and talk with your mother. She’s waited so, so long and you have so much to say.”"
-            
-            menu:
-                "Fold to the floor. Talk":
-                    $ pacifism += 1
-                    $ empathy += 1
-                    $ renpy.notify("Pacifism +1\nEmpathy +1")
-                    "Your knees give out and Glen puts a hand on your shoulder as you crumple."
-                    "You can feel their eyes as they look to you, but your eyes are on the floor as your voice shakes."
-                    H "“I don’t know what to say.”"
-                    H "“There’s so much and yet, I have nothing.”"
-                    C "“Oh, sweet. Lay awhile. Rest. Close your eyes.”"
-                    "You think Glen is talking to you too. You think they are shaking you, even."
-                    "You blink as your vision tips to the ceiling and you think you catch a glimpse of their face creased with worry, but everything is blurring."
-                    "Like raindrops condensing on a window, the shapes and colors bleed and it blends all into one."
-                    C "“Tender one, lovely thing.”"
-                    "You swear you feel fingers in your hair."
-                    
-                "Scream and lash out":
-                    $ pacisfism -= 1
-                    $ empathy += 1
-                    $ renpy.notify("Violence +1\nEmpathy +1"
-                    "It’s too much."
-                    "Much too much."
-                    "Her voice, the song, this cold, damp; digging their fingers into your flesh, the pain cannot go on."
-                    "Something scratches out your throat."
-                    "Something beastial rips and claws."
-                    "You are screaming and it is raw and the stone catches the sound and starts to shatter."
-                    "The reverberation is too much. It catches and cuts."
-                    "Slabs of shale splinter and crash to the ground."
-                    C "“Oh, you’ve done it. What’ve you done?”"
-                    "Your tears are hot now, they burn in streaks across your face."
-                    "The place is coming down around you and you think you see Glen scrambling away, but everything is blurring."
-                    "Like raindrops condensing on a window, the shapes and colors bleed and it blends all into one."
-                    "Rubble batters at your shoulder, slices down your face."
-                    "You ache and bleed, but you are screaming until the real pain stops."
-                    "The cave collapses."
-                    
-                "Do nothing":
-                    $ pacifism += 1
-                    $ empathy += 1
-                    $ renpy.notify("Pacifism +1\nEmpathy +1")
-                    G "“We can’t stay here. You can’t stay here.”"
-                    "They put their hand on your shoulder, then run their fingers up and through your hair."
-                    "You’re not sure you like it, but the touch, it grounds you."
-                    G "“That might be your mother, but it’s not her anymore.”"
-                    G "“She died.”"
-                    G "“She walked into the forest and maybe she’s something else, but the woman you knew, died.”"
-                    "Glen is right. You know they’re right, but what’s the threshold on letting go?"
-                    "When is the right time?"
-                    "What are the right circumstances?"
-                    C "“Dear thing, lovely sweet. Do not leave. Stay with me awhile.”"
-                    H "“I love you, I really do.”"
-                    "You walk away, and every step feels like it’s through broken glass."
-                    "Frigid and fractured and compounding cut upon cut."
-                    "But Glen is there."
-                    "Glen holds you by the elbow, braces you as you buckle."
-                    "They are crying, too, but the smile, out in the light."
-                   "The further and further that you get, the wind rustles through the leaves, stones no longer present to whistle." 
-        
+            jump Voices2
         "Turn away and walk and walk and walk":
             $ pacisfism += 1
             $ empathy -= 1
-            $ renpy.notify("Pacifism +1\nApathy +1"
+            $ renpy.notify("Pacifism +1\nApathy +1")
             "The ground moves beneath your feet, fast and faster, starting to blur."
             "Glen calls after you, but it feels like the voice, like the cave calling for you to come back."
             "You don’t raise your head to look, you watch only for your own steps, only to make sure you don’t stumble and fall."
@@ -184,13 +112,103 @@ label Voices:
             "Same as before, now you can just feel its breath over your shoulder, warm and wet."
             "It drifts down along your nape and so you run faster."
 
+    $ nex = renpy.random.randint(0, len(Act3Scenes) - 1)
+    $ renpy.jump(Act3Scenes[nex])
+    
 
-
-
+label Voices2:    
+    "The air turns musty, the fresh damp decaying so quickly you can taste it."
+    H "“Mother?”"
+    H "“Mother, please.”"
+    "You wait in the dark for a reply, for the continuation of her song. You don’t remember when it stopped."
+    "Sometime between the outside and now and you wanted it to stop, but now there’s just so much empty."
+    "It’s a void that wants to grow, that erodes at you, breaking off bits and pieces to carry away downstream. Just so much silt."
+    "And then? And then."
+    C "“Harper, sweet? Oh dear, oh dear. You’ve come to see your mother-dust.”"
+    C "“She’s waited for you oh, so long. Poor thing, sweet thing, sad thing. She wept oh so long, hoping— only— to see you.”"
+    G "“Stop. Please don’t. Stop!” "
+    "You turn wildly, thrashing in the empty to find the source of the echoing call."
+    "It slides along the walls, slithers on the floor, drips slowly into your ear."
+    H "“What do you want?”"
+    C "“Oh, stay with me. Sit and stay awhile and talk with your mother. She’s waited so, so long and you have so much to say.”"
+            
+    menu:
+        "Fold to the floor. Talk":
+            $ pacifism += 1
+            $ empathy += 1
+            $ renpy.notify("Pacifism +1\nEmpathy +1")
+            "Your knees give out and Glen puts a hand on your shoulder as you crumple."
+            "You can feel their eyes as they look to you, but your eyes are on the floor as your voice shakes."
+            H "“I don’t know what to say.”"
+            H "“There’s so much and yet, I have nothing.”"
+            C "“Oh, sweet. Lay awhile. Rest. Close your eyes.”"
+            "You think Glen is talking to you too. You think they are shaking you, even."
+            "You blink as your vision tips to the ceiling and you think you catch a glimpse of their face creased with worry, but everything is blurring."
+            "Like raindrops condensing on a window, the shapes and colors bleed and it blends all into one."
+            C "“Tender one, lovely thing.”"
+            "You swear you feel fingers in your hair."
+                    
+        "Scream and lash out":
+            $ pacisfism -= 1
+            $ empathy += 1
+            $ renpy.notify("Violence +1\nEmpathy +1")
+            "It’s too much."
+            "Much too much."
+            "Her voice, the song, this cold, damp; digging their fingers into your flesh, the pain cannot go on."
+            "Something scratches out your throat."
+            "Something beastial rips and claws."
+            "You are screaming and it is raw and the stone catches the sound and starts to shatter."
+            "The reverberation is too much. It catches and cuts."
+            "Slabs of shale splinter and crash to the ground."
+            C "“Oh, you’ve done it. What’ve you done?”"
+            "Your tears are hot now, they burn in streaks across your face."
+            "The place is coming down around you and you think you see Glen scrambling away, but everything is blurring."
+            "Like raindrops condensing on a window, the shapes and colors bleed and it blends all into one."
+            "Rubble batters at your shoulder, slices down your face."
+            "You ache and bleed, but you are screaming until the real pain stops."
+            "The cave collapses."
+                    
+        "Do nothing":
+            $ pacifism += 1
+            $ empathy += 1
+            $ renpy.notify("Pacifism +1\nEmpathy +1")
+            G "“We can’t stay here. You can’t stay here.”"
+            "They put their hand on your shoulder, then run their fingers up and through your hair."
+            "You’re not sure you like it, but the touch, it grounds you."
+            G "“That might be your mother, but it’s not her anymore.”"
+            G "“She died.”"
+            G "“She walked into the forest and maybe she’s something else, but the woman you knew, died.”"
+            "Glen is right. You know they’re right, but what’s the threshold on letting go?"
+            "When is the right time?"
+            "What are the right circumstances?"
+            C "“Dear thing, lovely sweet. Do not leave. Stay with me awhile.”"
+            H "“I love you, I really do.”"
+            "You walk away, and every step feels like it’s through broken glass."
+            "Frigid and fractured and compounding cut upon cut."
+            "But Glen is there."
+            "Glen holds you by the elbow, braces you as you buckle."
+            "They are crying, too, but the smile, out in the light."
+            "The further and further that you get, the wind rustles through the leaves, stones no longer present to whistle." 
+            
+    $ nex = renpy.random.randint(0, len(Act3Scenes) - 1)
+    $ renpy.jump(Act3Scenes[nex])
+        
+    
+label Boa:
+    $ Act2Scenes.pop(nex)
+    scene bgAct2
+    
+    "The shimmering majesty of the forest edge gives way to cool air and shadow as you move deeper."
+    "Glen hovers near you."
+    "Even their instinct for exploration seems dampened by the dimming light."
+    H "“Don’t worry, Glenny. We’ll find our way out of here soon.”"
+    "Glen reaches out and touches your shoulder."
+    if $ HasBaby:
+        "The baby coos in Glen’s arms, which calms some of the tension in their shoulders."
+    
 
     
     
     
     $ nex = renpy.random.randint(0, len(Act3Scenes) - 1)
     $ renpy.jump(Act3Scenes[nex])
-    

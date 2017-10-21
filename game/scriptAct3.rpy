@@ -8,9 +8,8 @@ label Flame:
     "It starts as a pinprick between the shadow of the trees, but the longer you walk, the more it feeds."
     "Glen is clutched to you, or you to them. It takes the two to navigate the roots and rocks, stepping slowly over every bump and break in the terrain."
     "The struggle not to stop or stumble grows more and more difficult with every inch gained, but that glow gets brighter too, warmer, worth the awkward effort."
-    pause 2
     "So you hope."
-    pause 2
+    pause 1
     "What you reach— the thing you see— it’s hard to get the grasp of. It moves, constant, shifting its shape from each second to the next."
     "A boy, a girl, a creature, a flame. Caught in a jar. It bats at the glass, curious face tipped to watch its voyeurs back."
     "Tap, tap, tap. Shift, hiss, crackle."
@@ -66,7 +65,7 @@ label Flame:
             G "“I think I’d like to be someone else’s fairytale.”" 
             "And so you walk. This time there’s no stress, no worry, no need to be somewhere else. Arm in arm, out into the dark, you have nothing but time."
 
-label 2Glens:
+label TwoGlens:
     $ Act2Scenes.pop(nex)
     scene bgAct3
     "The forest runs deep, endless. It’s impossible to say how long you’ve been here, impossible to say how you might get out."
@@ -75,16 +74,15 @@ label 2Glens:
     H "“Glen?” Again, louder, firmer."
     G "“Over here!” Glen’s voice comes from ahead, echoing. You wonder how they got in front of you."
     "You part the branches again, and see the scene, mirrored. Glen wrapped in vines, tied to a stump and next to them... Glen is wrapped in vines, tied to a stump."
-    if HasBaby = true:
+    if HasBaby:
         "You hear a murmur beside you. The baby lies in a pile of leaves, and you pick it up in Glen’s stead."
-    else:
     G "Glen on the right calls out. “Harp, it’s a trick! It’s me, I’m right here!”"
     G "The other Glen pleads. “Harp no, that’s a changeling! You have to believe me!” They struggle against their bindings."
-    if HasBaby = true:
+    if HasBaby:
         "The right Glen starts to cry, and the baby joins in."
     else:
         "The right Glen starts to cry, tears falling onto the fallen leaves below them."
-    if TwiceGiven = true:
+    if TwiceGiven:
         $ pacisfism -= 2
         $ empathy -= 1            
         $ renpy.notify("Violence +2\nApathy +1")
@@ -100,7 +98,7 @@ label 2Glens:
                 $ pacisfism += 1
                 $ empathy += 2            
                 $ renpy.notify("Pacifism +1\nEmpathy +2")
-                if HasBaby = true:
+                if HasBaby:
                     "You walk slowly to the crying Glen, and shift the baby into one arm as the other hand draws the knife. You cut the vines."
                 else:
                     "You walk slowly to the right Glen, and draw the knife. The vines are tight against them, but the knife severs them easily."

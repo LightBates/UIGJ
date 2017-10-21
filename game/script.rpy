@@ -7,11 +7,17 @@ image bgAct3 = "/images/Backgrounds/act_2_bg.png"
 
 # Declare Sprites
 image harper = "/images/Characters/harper_sprite.png"
-image glen = "/images/Characters/harper_sprite.png"
+image glen = "/images/Characters/glen_sprite.png"
+image glenbabe = "/images/Characters/glen_sprite_bab.png"
+image merchant = "/images/Characters/the_merchant_sprite.png"
+image babe = "/images/Characters/BABEE.png"
+image box = "/images/Characters/box_sprite.png"
+image lost = "/images/Characters/the_lost_sprite.png"
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
+define C = Character("Cave")
 define F = Character("Flame")
 define H = Character("Harper")
 define G = Character("Glen")
@@ -19,6 +25,7 @@ define Cr = Character("Crowd")
 define L = Character("Lost")
 define B = Character("Baby")
 define M = Character("Merchant")
+define S = Character("Stranger")
 
 
 
@@ -27,8 +34,8 @@ define M = Character("Merchant")
 label start:
     
     $ Act1Scenes = ["Treasure", "Merchant", "BirchBox"]
-    $ Act2Scenes = ["InTheTree"]
-    $ Act3Scenes = ["Flame"]
+    $ Act2Scenes = ["InTheTree", "Voices", "Boa"]
+    $ Act3Scenes = ["Flame", "TwoGlens"]
     
     #Flags
     $ HasBaby = False
