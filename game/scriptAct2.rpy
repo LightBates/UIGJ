@@ -4,7 +4,10 @@ label InTheTree:
     G "“Are we lost?” Glen asks as you push the thoughts from your mind."
     H "“No,” you respond firmly. “We just haven’t found our way yet.”"
     "A wail comes from a break in the leaves above you, but all you can see is black."
-    G "“W-What was that?” Glen asks, latching onto your sleeve. “It sounded like a monster.”"
+    if HasBaby = true:
+        "“W-What was that?” Glen asks, holding the baby closer. “It sounded like a monster.”"
+    else:
+        G "“W-What was that?” Glen asks, latching onto your sleeve. “It sounded like a monster.”"
     "You would tell Glen there are no such thing as monsters, but you don’t lie to Glen."
     "You squint at the shadows of the tree, and see two lights. They look like a break in the leaves, where the sun shines through, but then they blink."
     "The voice comes again, ragged and desperate."
@@ -12,6 +15,8 @@ label InTheTree:
     G "“Harper.”"
     "Your eyes fall to the left, where an ancient rope wraps around the tree and up into the canopy, where the lights stare back."
     G "You feel a tug at your sleeve. “We need to go, Harper. It’ll catch us if we don’t. Please.”"
+    if HasBaby = true:
+        G "Glen looks at the baby in their arms, then back at you. “Harper.”"
     
     menu:
         "Cut the rope":
@@ -21,8 +26,11 @@ label InTheTree:
             "You pull the knife from your belt. Specks of light between the leaves reflect from its blade."
             "Glen backs away, and you begin to saw at the rope, and watch as the weight it holds starts to pull it apart."
             G "“Harper, it’ll be fine, just come on.”"
-            "You step away from the tree, and don’t turn to look back. Glen holds out a trembling hand, and you take it until the shaking stops."
-            "Something thuds in the woods behind you."
+            if HasBaby = true:
+                "Glen smiles, relieved, and coos softly at the baby as you continue into the woods. Something thuds behind you."
+            else:
+                "You step away from the tree, and don’t turn to look back. Glen holds out a trembling hand, and you take it until the shaking stops."
+                "Something thuds in the woods behind you."
         "Climb up the tree":
             $ pacifism += 1
             $ empathy += 1
@@ -36,12 +44,17 @@ label InTheTree:
             "The shadow dissipates, hit by specks of light filtered through leaves and perfected by the knife’s perfect edge."
             "You cut the ropes, carefully."
         "Leave with Glen":
-            $ pacifism -= 1
-            $ empathy += 1
-            $ renpy.notify("Violence +1\nEmpathy +1")
+            if HasBaby = true:
+                $ pacifism -= 1
+                $ empathy += 2
+                $ renpy.notify("Violence +1\nEmpathy +2")
+            else:
+                $ pacifism -= 1
+                $ empathy += 1
+                $ renpy.notify("Violence +1\nEmpathy +1")
             H "“...Okay. Okay. We’ll leave.”"
             "You turn to go, giving the tree one last look."
-            "The two of you walk deeper into the forest, and ignore the thump behind you."
+            "You walk deeper into the forest, and ignore the thump behind you."
             
     $ nex = renpy.random.randint(0, len(Act3Scenes) - 1)
     $ renpy.jump(Act3Scenes[nex])
