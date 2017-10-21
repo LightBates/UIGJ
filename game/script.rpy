@@ -96,7 +96,8 @@ label start:
     "Birds chirping, water running, the creak of a cart somewhere far down along the road-"
     "It all cuts out as you step beyond and into the forest."
     $ nex = renpy.random.randint(0, len(Act1Scenes) - 1)
-    $ renpy.jump(Act1Scenes[nex])
+    #$ renpy.jump(Act1Scenes[nex])
+    jump Treasure
     
 label TheForest:
     $ Act1Scenes.pop(nex)

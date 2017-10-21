@@ -219,37 +219,53 @@ label Boa:
         "Attempt to remove the snake":
             $ pacifism += 1
             $ empathy += 1
-            $ renpy.notify("Pacifism +1\nEmpath +1")
-            
+            $ renpy.notify("Pacifism +1\nEmpathy +1")
+            "You yank a branch from the underbrush and test its heft, brandishing it before you as you approach the stranger."
+            H "“Hold still!”"
+            "The stranger warbles and squirms."
+            "You attempt to wedge the branch between his body and the snake’s, but merely succeed in prodding the beast."
+            G "“No!” Glen shouts."
+            "The snake hisses and snaps its jowls at you."
+            "You stagger back just in time..."
+             "-- just in time to watch those fangs sink deep into the stranger’s throat."
+             "The pierce of his scream pins you in place on the forest floor."
+             G "“Harper!”"
+             "Glen scurries to your side, yanks you to your trembling feet, and pulls you by the hand."
+             "Away, away from the blood, the sound of tearing flesh."
+             if HasBaby:
+                 "The infant sobs from Glen’s free arm, trailing noise like breadcrumbs behind you."
+             "You glance back as you flee."
+             "The snake unhinges its jaw. You snap your gaze forward."
+
         "Attempt to kill the snake":
-            
-            
+            $ pacifism -= 1
+            $ empathy += 1
+            $ renpy.notify("Violence +1\nEmpathy +1")
+            H "“Hold still.”"
+            "You brandish your trusty knife and tread carefully towards the stranger and his beast."
+            "The blade sinks easy into the snake’s belly and you slice down, spilling its guts to the forest floor in one long vertical cut."
+            "Its body slackens. The stranger sucks in grateful breath."
+            S "“Thank you. Thank you. My savior,” he sobs and falls to his knees."
+            H "“There’s a village at the edge of these woods. You may find more help there.”"
+            "The stranger’s brows furrow together. He cradles his mangled arm."
+            S "“You will not come?”"
+            H "“No."
+                        
         "Flee with Glen":
-
-1. Attempt to remove the snake. (empathy nonviolence)
-2. Attempt to kill the snake. (empathy violence)
-3. Flee with Glen. (apathy empathy)
-
-1. Attempt to remove the snake.
-
-You yank a branch from the underbrush and test its heft, brandishing it before you as you approach the stranger.
-
-h “Hold still!”
-
-The stranger warbles and squirms. You attempt to wedge the branch between his body and the snake’s, but merely succeed in prodding the beast. 
-
-g “No!” Glen shouts.
-
-The snake hisses and snaps its jowls at you. You stagger back  just in time -- just in time to watch those fangs sink deep into the stranger’s throat. The pierce of his scream pins you in place on the forest floor.
-
-g “Harper!” 
-
-Glen scurries to your side, yanks you to your trembling feet, and pulls you by the hand. Away, away from the blood, the sound of tearing flesh.
-
-    
-
-    
-    
+            $ pacifism += 1
+            $ empathy -= 1
+            $ renpy.notify("Pacifism +1\nApathy +1")
+            "You seize Glen by the hand."
+            H "“We must get out of here, now!”"
+            "You pull Glen forward, away, anywhere but with this tangled man and his beastial captor."
+            "As you run, you hear him howling."
+            S "“No! Please! Please!”"
+            if HasBaby:
+                "The infant sobs from Glen’s free arm, trailing noise like breadcrumbs behind you."
+            "For an instant, you glance back."
+            "The snake unhinges its jaw. You snap your gaze forward."
+            "..."
+            "The stranger’s screams are muffled by the distance."    
     
     $ nex = renpy.random.randint(0, len(Act3Scenes) - 1)
     $ renpy.jump(Act3Scenes[nex])
