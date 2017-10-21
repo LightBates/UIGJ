@@ -12,7 +12,6 @@ label Act1_Treasure
     "More rustling interrupts your thoughts. It’s louder this time. Violent. Your eyes dart to the knife at your belt."
 
     menu:
-        "We should really listen to our parents.":
         "Hide him":
             $ pacifism += 1
             $ renpy.notify("Nonviolence +1")
