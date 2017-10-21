@@ -47,6 +47,7 @@ label Treasure:
             L "“Please.” It’s the man’s voice. He holds the bundle to you and Glen. “Please take her. Don’t let them have her.”"
             "Glen nods and takes the baby from him, holding her close."
             $ HasBaby = True
+            $ TwiceGiven = True
 
         "Wait and see":
             $ pacifism -= 1
