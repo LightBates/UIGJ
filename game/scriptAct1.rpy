@@ -16,7 +16,7 @@ label Act1_Treasure
             $ pacifism += 1
             $ renpy.notify("Nonviolence +1")
             $ empathy -= 1
-            $ renpy.notify("Ampathy +1")
+            $ renpy.notify("Apathy +1")
             H "“Hurry.” You get closer, trying not to dirty yourselves too badly as the two of you lift his arms onto your shoulders."
             H "“In the bushes.” You ease him down into the shade of the bushes, while Glen pushes the dirt around with their boot, trying to hide the man’s footprints."
             "A crowd emerges from the brush. Their eyes fall upon you."
