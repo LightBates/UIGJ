@@ -1,5 +1,6 @@
 label Treasure:
  # These display lines of dialogue.
+    scene bgAct1
     $ Act1Scenes.pop(nex)
     "Another clearing opened before them. You walk toward the center, looking for another path out."
     G "“Harper, someone’s coming!” Glen whispers, pulling your sleeve. Rustling interrupts the soft silence of the forest."
@@ -59,6 +60,7 @@ label Treasure:
     
     
 label Merchant:
+    scene bgAct1
     $ Act1Scenes.pop(nex)
     "It starts as a tinkling, a clatter of glass and jangle of charms. The sound is familiar to those who trade in wares, traveling the dirt roads to larger cities with the hope of a livelihood."
     "Harper and Glen know it well, always excited for the promise of something new, something never before seen drifting into their sphere."
@@ -143,6 +145,7 @@ label Merchant:
     
     
 label BirchBox:
+    scene bgAct1
     $ Act1Scenes.pop(nex)
     
     

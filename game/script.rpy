@@ -1,5 +1,8 @@
 # The script of the game goes in this file.
 
+# Declare Background Images
+image bgAct1 = "/images/Backgrounds/act_1_bg.png"
+
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
