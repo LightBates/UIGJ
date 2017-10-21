@@ -86,7 +86,7 @@ label Voices:
     "It— hums."
     "The cave, the breeze, your mother..."
     "Dead."
-    pause 1
+    "..."
     "Her ghost, perhaps."
     "A specter sent to ask why, why come into the forest now if you didn’t then."
     "More cruel than to never wonder, never wander, never seek to know."

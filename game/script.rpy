@@ -4,6 +4,7 @@
 image bgAct1 = "/images/Backgrounds/act_1_bg.png"
 image bgAct2 = "/images/Backgrounds/act_2_bg.png"
 image bgAct3 = "/images/Backgrounds/act_2_bg.png"
+image bgFlame = "/images/Backgrounds/flame_bg.png"
 
 # Declare Sprites
 image harper = "/images/Characters/harper_sprite.png"
@@ -13,6 +14,7 @@ image merchant = "/images/Characters/the_merchant_sprite.png"
 image babe = "/images/Characters/BABEE.png"
 image box = "/images/Characters/box_sprite.png"
 image lost = "/images/Characters/the_lost_sprite.png"
+image flame = "/images/Characters/fire_sprite.png"
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
