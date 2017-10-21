@@ -1,5 +1,9 @@
 # The script of the game goes in this file.
 
+init python:
+    import math
+
+
 # Declare Background Images
 image bgAct1 = "/images/Backgrounds/act_1_bg.png"
 image bgAct2 = "/images/Backgrounds/act_2_bg.png"
@@ -46,7 +50,7 @@ label start:
     $ TwiceGiven = False
     
     # empathy++ = caring for others, empathy-- = apathy
-    $ empathy = int(0)
+    $ empathy = 0
     
     # pacifism++ = nonviolence, pacifism-- = violence
     $ pacifism = 0
@@ -54,6 +58,8 @@ label start:
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
+
+   
 
     scene bgAct1
 

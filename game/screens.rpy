@@ -317,6 +317,8 @@ screen navigation():
             textbutton _("Main Menu") action MainMenu()
 
         textbutton _("About") action ShowMenu("about")
+        
+        textbutton _("Credits") action ShowMenu("credits")
 
         if renpy.variant("pc"):
 
@@ -555,6 +557,7 @@ screen about():
             text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 
+
 ## This is redefined in options.rpy to add text to the about screen.
 define gui.about = ""
 
@@ -564,6 +567,42 @@ style about_label_text is gui_label_text
 style about_text is gui_text
 
 style about_label_text:
+    size gui.label_text_size
+
+
+
+##Credits
+
+screen credits():
+
+    tag menu
+
+    ## This use statement includes the game_menu screen inside this one. The
+    ## vbox child is then included inside the viewport inside the game_menu
+    ## screen.
+    use game_menu(_("Credits"), scroll="viewport"):
+
+        style_prefix "credits"
+
+        vbox:
+
+            label "[config.name!t]"
+            text _("\nAlec \"If We Have Chekov's Baby We Have To Use It\" Garibay\n")
+            text _("Tash \"We Can't Kill Babies\" Faye\n")
+            text _("Light \"Can't or Won't?\" Bates\n")
+            text _("Sam \"I'm Drawing The Baby If You Don't Stop Me\" Wilson\n")
+            text _("Suzee \"Sounds Like We're Going to the Baby Zone\" Goodman\n")
+            
+            
+## This is redefined in options.rpy to add text to the about screen.
+define gui.credits = ""
+
+
+style credits_label is gui_label
+style credits_label_text is gui_label_text
+style credits_text is gui_text
+
+style credits_label_text:
     size gui.label_text_size
 
 

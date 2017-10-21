@@ -30,6 +30,7 @@ define config.version = "1.0"
 ## between paragraphs, write \n\n.
 
 define gui.about = _("")
+define gui.credits = _("")
 
 
 ## A short name for the game used for executables and directories in the built
