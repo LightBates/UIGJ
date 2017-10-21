@@ -1,6 +1,7 @@
 label Treasure:
  # These display lines of dialogue.
     scene bgAct1
+    with Fade(2.0)
     $ Act1Scenes.pop(nex)
     "Another clearing opened before them. You walk toward the center, looking for another path out."
     show glen at left
@@ -80,21 +81,25 @@ label Treasure:
     
 label Merchant:
     scene bgAct1
+    with Fade(2.0)
     $ Act1Scenes.pop(nex)
     "It starts as a tinkling, a clatter of glass and jangle of charms. The sound is familiar to those who trade in wares, traveling the dirt roads to larger cities with the hope of a livelihood."
-    "Harper and Glen know it well, always excited for the promise of something new, something never before seen drifting into their sphere."
+    "You and Glen know it well, always excited for the promise of something new, something never before seen drifting into your sphere."
     "The creak of wheels and heaving, humid groan of something strange signal an approach."
     "It's—"
     "There’s—"
     "He rounds a gnarly trunk, cart almost overturning, before tipping his gaze up and coming to a stop."
+    show merchant at center
+    with dissolve
     M "“Aha! Oh my. Look at the heft of you two.”"
     "His gaze is more than assessing, it scores against your skin as the beady black flit from you to Glen and back again. "
-    G "Glen steps to him, immediate, bouncing as she steps to his stock."
+    G "Glen steps to him, immediate, bouncing as they step to his stock."
     G "“At us? At you! What a thing, what a wonderful, whimsical thing.”"
     "The merchant grins, teeth— oh the teeth."
     M "“Come, come and look. More I have, if your eye is for such things.”"
     "He stands aside, gestures his arms across the glowing bottles, stringed baubles, powders and liquids and… meats."
     "Something shifts."
+    "..."
     M "“I trade in many things, many things. Find something you fancy, please.”"
     
     menu:
@@ -103,7 +108,8 @@ label Merchant:
             
         "Stay back":
             "You step so slightly back, watching for the Merchant to track your anxious steps."
-    "Glen’s eyes light up as they spot something you don’t, plunging their hands into the cart before reeling back with a yelp. Blood, bright and wet, seeps down a single finger, blackens, and breaks off."
+    "Glen’s eyes light up as they spot something you don’t, plunging their hands into the cart before reeling back with a yelp."
+    "Blood, bright and wet, seeps down a single finger, blackens, and breaks off."
     G "“What was that, what did you do?”"
     M "“An even trade! Your delight costs but a bit of blood. Good business, great business. Thank you!”"
     "The merchant takes a low bow and then snuffles as he straightens out, moving to retake the front of his cart and take to the road." 
@@ -137,7 +143,9 @@ label Merchant:
             $ empathy -= 1
             $ renpy.notify("Pacifism +1\nApathy +1")
             "Glen clutches their hand, though there’s no longer a wound, and steps aside to let the merchant pass, glaring as he does."
-            "When he passes, that gaze is turned to you. Glen doesn’t speak again, but this time, as they move forward, they go without you. After a moment’s hesitation, you run after begging after a slower pace."
+            "When he passes, that gaze is turned to you."
+            "Glen doesn’t speak again, but this time, as they move forward, they go without you."
+            "After a moment’s hesitation, you run after begging for a slower pace."
         
         "Take mine instead then, now that we know the terms.":
             $ pacifism += 1
@@ -165,13 +173,14 @@ label Merchant:
     
 label BirchBox:
     scene bgAct1
+    with Fade(2.0)
     $ Act1Scenes.pop(nex)
     
     "Glen, arms akimbo, zips between trees, their steps so buoyant and sure that it looks more like floating than running."
     "Of course, you aren’t far behind – where Glen goes, you follow, though you feel much less effervescent."
     "The forest composes a song of groaning branches and snapping twigs, noisy in a too-quiet way, which Glen and their bubbling laughter pay little mind."
     H "“Don’t you think we should be more quiet?” you whisper."
-    "The dissonance between Glen’s bright laugh and the wood’s low scuttle makes you uneasy."
+    "The dissonance between Glen’s bright laugh and the woods' low scuttle makes you uneasy."
     G "“Honestly, Harper, you worry too much!”"
     "A large boulder, towering under its mossy blanket, catches Glen’s eye and they breeze towards it."
     "You drag your palm against the gnarled bark of an old, stooping oak tree, circling the heft of its circumference while you try to ease the roiling of your stomach."
@@ -186,7 +195,7 @@ label BirchBox:
         "Take the baby":
             $ pacifism += 1
             $ empathy += 1
-            $ renpy.notify("Pacifism +1\nEmpathy +1"
+            $ renpy.notify("Pacifism +1\nEmpathy +1")
             "You lift the child from the box, gather it close to your chest, and rock it gently."
             "Already, more color rises to its cheeks. The baby curls its body against you and your warmth, and you murmur to it."
             H "“I’ve got you. You’re safe now. I have you.”"
@@ -197,11 +206,12 @@ label BirchBox:
             "Glen shakes their head."
             G "“Who would abandon a baby in the woods?”"
             H "“Not I,” you say with a wry smile."
+            $ HasBaby = True
             
         "Leave the baby":
             $ pacifism -= 1
             $ empathy -= 1
-            $ renpy.notify("Violence +1\nApathy +1"
+            $ renpy.notify("Violence +1\nApathy +1")
             "You glance back at Glen, finding them still caught in thrall of the boulder and its climbing potential."
             "You look back into the box, half-hoping to find the baby transformed into treasure or wool or something - anything - else."
             "You cannot care for this child. You have nothing for it. No milk, no clothing, no affection."
@@ -215,7 +225,7 @@ label BirchBox:
         "Let Glen decide":
             $ pacifism += 1
             $ empathy -= 1
-            $ renpy.notify("Pacifism +1\nApathy +1"
+            $ renpy.notify("Pacifism +1\nApathy +1")
             H "“Glen!” you call. “Glen, come see this.”"
             "The baby stirs. Glen climbs down from their perch on the boulder and returns to your side."
             "They breathe a noise - a whimper - in shock and sympathy."
@@ -230,6 +240,7 @@ label BirchBox:
             "The baby offers a watery cry. Glen tucks it close to their chest and looks at you with wide eyes."
             G "“We can’t just leave her.”"
             "You shrug again."    
+            $ HasBaby = True
     
     $ nex = renpy.random.randint(0, len(Act2Scenes) - 1)
     $ renpy.jump(Act2Scenes[nex])

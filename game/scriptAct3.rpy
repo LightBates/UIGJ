@@ -1,6 +1,7 @@
 label Flame: 
     $ Act2Scenes.pop(nex)
-    scene bgAct3
+    scene bgFlame
+    with Fade(2.0)
     "It’s dark, so dark in the center of the forest."
     "Here the things that creep and call do so on the periphery, under cover."
     "It’s a place for nocturnal things, no matter the time. Their eyes glint and their wings flutter and the weight of them is everywhere."
@@ -33,7 +34,7 @@ label Flame:
     
     menu:
         "Let it out":
-            $ pacisfism -= 1
+            $ pacifism -= 1
             $ empathy += 1            
             $ renpy.notify("Violence +1\nEmpathy +1")
             "You can’t stand the way it looks at you, the way it aches to be set free."
@@ -50,7 +51,7 @@ label Flame:
             "As you burn."
             
         "Walk away":
-            $ pacisfism += 1
+            $ pacifism += 1
             $ empathy -= 1            
             $ renpy.notify("Pacifism +1\nApathy +1")
             "The dark is better, it must be better."
@@ -68,6 +69,7 @@ label Flame:
 label TwoGlens:
     $ Act2Scenes.pop(nex)
     scene bgAct3
+    with Fade(2.0)
     "The forest runs deep, endless. It’s impossible to say how long you’ve been here, impossible to say how you might get out."
     "You push dark branches out of your way, then turn to hold them open for Glen behind you. But Glen isn’t there."
     H "“Glen?” You call, looking back."
@@ -83,7 +85,7 @@ label TwoGlens:
     else:
         "The right Glen starts to cry, tears falling onto the fallen leaves below them."
     if TwiceGiven:
-        $ pacisfism -= 2
+        $ pacifism -= 2
         $ empathy -= 1            
         $ renpy.notify("Violence +2\nApathy +1")
         "Before you can act, the terrible rustling returns. The figures return from the forest."
@@ -95,7 +97,7 @@ label TwoGlens:
     else: 
         menu:
             "Free crying Glen":
-                $ pacisfism += 1
+                $ pacifism += 1
                 $ empathy += 2            
                 $ renpy.notify("Pacifism +1\nEmpathy +2")
                 if HasBaby:
@@ -107,7 +109,7 @@ label TwoGlens:
                 "You turn your back on them."
 
             "Free struggling Glen":
-                $ pacisfism -= 2
+                $ pacifism -= 2
                 $ empathy += 1            
                 $ renpy.notify("Violence +2\nEmpathy +1")
                 G "As you step toward the struggling Glen, the other begins to sob. “Please. Please, Harper. Don’t do this.”"
@@ -123,7 +125,7 @@ label TwoGlens:
                 "Glen hugs you, tighter than you ever remember. They smell of the forest."
 
             "Leave":
-                $ pacisfism -= 1
+                $ pacifism -= 1
                 $ empathy -= 2            
                 $ renpy.notify("Violence +1\nApathy +2")
                 "You look to the trees, to the forest. You look at the Glens. You’re so... tired, of all this."

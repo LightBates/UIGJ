@@ -16,6 +16,8 @@ image box = "/images/Characters/box_sprite.png"
 image lost = "/images/Characters/the_lost_sprite.png"
 image flame = "/images/Characters/fire_sprite.png"
 
+image title = "/images/Backgrounds/title_sprite.png"
+
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
@@ -41,6 +43,7 @@ label start:
     
     #Flags
     $ HasBaby = False
+    $ TwiceGiven = False
     
     # empathy++ = caring for others, empathy-- = apathy
     $ empathy = int(0)
@@ -64,13 +67,15 @@ label start:
     "There’s a forest at the edge of the village, a border between the village and the outside. "
     "Glen walks beside you, at your side for all things, but especially adventure, weaving in and around your own, meandering trail."
     "You can’t remember, exactly, whose idea it first was to come along the path, but it hardly matters as you get nearer and nearer the creeping fringe."
-    "You stop just outside it, turn to look at one another, just to be sure."
+    "You stop just outside it, turning to look at one another, just to be sure."
     show glen at center
+    with dissolve
     G "“What’re you waiting for?”"
     show glen at center:
         linear .5 left
     pause .5
     show harper at right
+    with dissolve
     H "“You know we’re not supposed to go in there, Glen. You know what they say is inside.”"
     G "“When has that ever stopped us before?”"
     
@@ -82,7 +87,7 @@ label start:
         "Right as always, dear.":
             H "“Right as always, dear."
             
-        "Aren't you worried about what's inside?":
+        "Aren't you worried?":
             H "“Aren't you worried about what's inside?”"
             G "“Aren't {i}you{/i} excited?”"
             
@@ -93,13 +98,20 @@ label start:
             
     "Glen smiles at you, that smile that’s so sure the grass is always greener, and takes your hand."
     hide glen
+    with dissolve
     hide harper
+    with dissolve
     "You believe there might be something better out there, something brighter, something magic."
-    "Birds chirping, water running, the creak of a cart somewhere far down along the road-"
+    "Birds chirping, water running, the creak of a cart somewhere far down along the road—"
     "It all cuts out as you step beyond and into the forest."
+    window hide
+    show title at truecenter
+    with Dissolve(2.0)
+    pause 3
+    hide title
+    with Dissolve(2.0)
     $ nex = renpy.random.randint(0, len(Act1Scenes) - 1)
-    #$ renpy.jump(Act1Scenes[nex])
-    jump Treasure
+    $ renpy.jump(Act1Scenes[nex])
     
 label TheForest:
     $ Act1Scenes.pop(nex)

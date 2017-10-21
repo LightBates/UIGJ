@@ -1,6 +1,7 @@
 label InTheTree:
     $ Act2Scenes.pop(nex)
     scene bgAct2
+    with Fade(2.0)
     "The forest runs deeper than any you’ve entered. For a moment, you imagine weaving through its gnarled roots and branches forever."
     G "“Are we lost?” Glen asks as you push the thoughts from your mind."
     H "“No,” you respond firmly. “We just haven’t found our way yet.”"
@@ -65,16 +66,18 @@ label InTheTree:
 label Voices:
     $ Act2Scenes.pop(nex)
     scene bgAct2
+    with Fade(2.0)
     "It’s the cool, damp. It seeps through your skin and settles somewhere along the bones."
     "Glen notices it as surely as you, tugging their clothes closer and hitching their shoulders as though that might shield."
     "You stop to study the sensation, to look for clouds darkening the canopy, a lake reflecting a colder breeze."
-    "You find a cave, or the mouth of it. It yawns in the distance, an open maw through which no light breaks, and— breathes."
+    "You find a cave, or the mouth of it. It yawns in the distance — an open maw through which no light breaks — and... breathes?"
     C "“Harper, sweet. Could it be?”"
     G "“Could it be?”"
     "Glen turns to you, expression brittle."
-    H "“Not, not. Definitely not, how could it be?” "
+    H "“No, No.” you say, as much to Glen as to yourself."
+    H "“Definitely not, how could it be?” "
     C "“Harper, sweet. Come and see me. Don’t you want to see your mother?”"
-    "It drifts. It rides along that tepid gust, a breathy sigh."
+    "The voice drifts. It rides along that tepid gust, a breathy sigh."
     "It’s melodic, but discordant, like wind through holes in too smooth stone."
     "It sounds… like her. So like her, sad and sweet and not sure she wants to be heard."
     G "“But the forest— they thought her lost beyond the trees. Perhaps, well perhaps— like us.”"
@@ -83,12 +86,12 @@ label Voices:
     "The smell of burnt bread."
     "The way that dad peered down the path for several minutes and then looked no longer."
     C "“Don’t break her heart. Tender one, lovely thing. Come and see your mother, sweet.”"
-    "It— hums."
+    "It... hums."
     "The cave, the breeze, your mother..."
     "Dead."
     "..."
     "Her ghost, perhaps."
-    "A specter sent to ask why, why come into the forest now if you didn’t then."
+    "A specter sent to ask why, why come into the forest now if you didn’t then?"
     "More cruel than to never wonder, never wander, never seek to know."
     "The tune is something strange, something so like a knell."
     "And without your notice, without the thought of it, you’re crying."
@@ -102,7 +105,7 @@ label Voices:
         "Step into the cave":
             jump Voices2
         "Turn away and walk and walk and walk":
-            $ pacisfism += 1
+            $ pacifism += 1
             $ empathy -= 1
             $ renpy.notify("Pacifism +1\nApathy +1")
             "The ground moves beneath your feet, fast and faster, starting to blur."
@@ -146,7 +149,7 @@ label Voices2:
             "You blink as your vision tips to the ceiling and you think you catch a glimpse of their face creased with worry, but everything is blurring."
             "Like raindrops condensing on a window, the shapes and colors bleed and it blends all into one."
             C "“Tender one, lovely thing.”"
-            "You swear you feel fingers in your hair."
+            "You swear you feel fingers in your hair..."
                     
         "Scream and lash out":
             $ pacisfism -= 1
@@ -197,6 +200,7 @@ label Voices2:
 label Boa:
     $ Act2Scenes.pop(nex)
     scene bgAct2
+    with Fade(2.0)
     
     "The shimmering majesty of the forest edge gives way to cool air and shadow as you move deeper."
     "Glen hovers near you."
@@ -227,15 +231,15 @@ label Boa:
             G "“No!” Glen shouts."
             "The snake hisses and snaps its jowls at you."
             "You stagger back just in time..."
-             "-- just in time to watch those fangs sink deep into the stranger’s throat."
-             "The pierce of his scream pins you in place on the forest floor."
-             G "“Harper!”"
-             "Glen scurries to your side, yanks you to your trembling feet, and pulls you by the hand."
-             "Away, away from the blood, the sound of tearing flesh."
-             if HasBaby:
-                 "The infant sobs from Glen’s free arm, trailing noise like breadcrumbs behind you."
-             "You glance back as you flee."
-             "The snake unhinges its jaw. You snap your gaze forward."
+            "-- just in time to watch those fangs sink deep into the stranger’s throat."
+            "The pierce of his scream pins you in place on the forest floor."
+            G "“Harper!”"
+            "Glen scurries to your side, yanks you to your trembling feet, and pulls you by the hand."
+            "Away, away from the blood, the sound of tearing flesh."
+            if HasBaby:
+                "The infant sobs from Glen’s free arm, trailing noise like breadcrumbs behind you."
+            "You glance back as you flee."
+            "The snake unhinges its jaw. You snap your gaze forward."
 
         "Attempt to kill the snake":
             $ pacifism -= 1
