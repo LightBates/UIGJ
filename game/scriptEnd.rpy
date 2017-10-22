@@ -1,4 +1,44 @@
 label EndScene:
+    if HasBaby and Crowd:
+        "A violent rustling erupts around you, the tide of noise stopping you in your tracks."
+        "A crowd of figures flow forth from the trees and the brush, an elegant wave of shapes that envelops you and Glen in its center."
+        "You press close to one another, back to back, Glen clutching the baby and you gripping your knife."
+        Cr "\"Our child,\" they say as one."
+        "Glen pulls the baby nearer to their chest."
+        Cr "\"You have found our child. You have brought her back.\""
+        H "\"Your child?\""
+        Cr "\"Stolen,\" the chorus says, pained. \"Torn away, then hidden from our view.\""
+        "The crowd stretches out their hands and one body steps forth from the herd."
+        Cr "\"She must return home.\""
+        "Glen looks at you, question in their eyes, brows furrowed."
+        menu:
+            "Give them the baby":
+            $ renpy.notify("Pacifism +1")
+            "You nod at Glen. The strange swarm does seem to care deeply for the child, and things that belong to this wild forest should not be removed. Glen nods back.
+
+They ease the infant into the arms of the awaiting figure.
+
+c “Thank you,” the crowd murmurs. 
+
+The rusting roars around you once again and you snap your hands up to cover you ears against it.
+
+Soon enough, they are all gone. You take Glen’s hand.
+
+2. Fight back (violence)
+
+You have no way to be certain that the child belongs to this eerie assemblage. And even then, being absorbed into this anonymous mass seems a ghoulish fate. 
+
+You won’t let them. You brandish your knife and swipe at the figure in front of Glen. It hisses and sinks back into the swarm. 
+
+You stab at the next that approaches, and the next, and the next, but there are so many and only one of you.
+
+They overtake you in a roar of rustling.
+
+When the sound subsides and the tide recedes, the child is gone.
+
+You help Glen to their feet and hug them tightly. 
+
+    
     if ( math.fabs(empathy) > math.fabs(pacifism)):
         if empathy > 0:
             jump Empathy

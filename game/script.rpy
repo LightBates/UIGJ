@@ -40,7 +40,7 @@ define Cr = Character("Crowd")
 define F = Character("Flame")
 define G = Character("Glen")
 define H = Character("Harper")
-define L = Character("Lost")
+define L = Character("Disheveled Traveler")
 define M = Character("Merchant")
 define S = Character("Stranger")
 define W = Character("Woman")
@@ -59,6 +59,7 @@ label start:
     $ HasBaby = False
     $ TwiceGiven = False
     $ Alone = False
+    $ Crowd = True
     
     # empathy++ = caring for others, empathy-- = apathy
     $ empathy = 0
@@ -98,13 +99,19 @@ label start:
     
     menu:
         "We should really listen to our parents.":
+            $ pacifism += 1
+            $ renpy.notify("Pacifism +1")
             H "\"We should really listen to our parents.\""
             G "\"You’re such a staunch, Harper.\""
             
         "Right as always, dear.":
+            $ empathy -= 1
+            $ renpy.notify("Apathy +1")
             H "\"Right as always, dear."
             
         "Aren’t you worried?":
+            $ empathy += 1
+            $ renpy.notify("Empathy +1")
             H "\"Aren’t you worried?\""
             G "\"Aren’t {i}you{/i} excited?\""
             

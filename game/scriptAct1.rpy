@@ -19,6 +19,7 @@ label Treasure:
     G "\"Should we hide him?\" Glen asks you, getting straight to the point."
     L "\"P-Please, they’re going to kill me.\" His voice becomes hushed. You see he carries a bundle, something precious."
     "More rustling interrupts your thoughts. It’s louder this time. Violent. Your eyes dart to the knife at your belt."
+    $ Crowd = False
 
     menu:
         "Hide him":

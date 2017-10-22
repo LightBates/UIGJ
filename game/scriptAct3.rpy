@@ -105,7 +105,7 @@ label TwoGlens:
         "With the baby in your arms, you don’t have time to draw the knife. But they are as swift as before."
         "The baby is snatched from your arms, and as the shadows part, you see that you are alone. The stumps lie empty, torn vines littering the forest floor."
         "You are alone. Now, forever more."
-        return
+        jump Alone
     else: 
         menu:
             "Free crying Glen":
@@ -259,7 +259,8 @@ label WraithChoiceBaby:
             H "\"We have to look out for one another, no matter what.\" You swallow."
             H "\"I’m sorry.\""
             "Glen, tearful, nods."
-            "Together you run into the awaiting dark."  
+            "Together you run into the awaiting dark."
+            $ HasBaby = False
             jump EndScene
             
         "Offer yourself":
