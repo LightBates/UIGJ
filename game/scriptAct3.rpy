@@ -16,7 +16,7 @@ label Flame:
     with dissolve
     "A boy, a girl, a creature, a flame. Caught in a jar. It bats at the glass, curious face tipped to watch its voyeurs back."
     "Tap, tap, tap. Shift, hiss, crackle."
-    "Despite the burn, no smoke gathers to cloud the view. This thing, white-hot at the center, molten, throwing off coronas of light and warmth..."
+    "Despite the burn, no smoke gathers to cloud the view. This thing, it's white-hot at the center, molten, throwing off coronas of light and warmth."
     F "\"Out. Out!\""
     F "It taps the glass, shifts, pools against the edge and burns."
     show flame at center:
