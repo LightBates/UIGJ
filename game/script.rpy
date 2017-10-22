@@ -47,9 +47,14 @@ define W = Character("Woman")
 define V = Character("Village Elder")
 
 
+# Declare music
+
+define bgm = "/audio/Complect_For.mp3"
+
 # The game starts here.
 
 label start:
+    play music bgm loop
     
     $_game_menu_screen = "preferences"
     

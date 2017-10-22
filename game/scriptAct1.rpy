@@ -198,7 +198,7 @@ label BirchBox:
     $ Act1Scenes.pop(nex)
     
     "Glen, arms akimbo, zips between trees, their steps so buoyant and sure that it looks more like floating than running."
-    "Of course, you aren’t far behind – where Glen goes, you follow, though you feel much less effervescent."
+    "Of course, you aren’t far behind - where Glen goes, you follow, though you feel much less effervescent."
     "The forest composes a song of groaning branches and snapping twigs, noisy in a too-quiet way, which Glen and their bubbling laughter pay little mind."
     show harper at right
     with dissolve
@@ -211,7 +211,7 @@ label BirchBox:
     hide glen
     with dissolve
     "You drag your palm against the gnarled bark of an old, stooping oak tree, circling the heft of its circumference while you try to ease the roiling of your stomach."
-    "Your hand catches on a knot – no, a hollow – in the tree."
+    "Your hand catches on a knot - no, a hollow - in the tree."
     "You pause and peer inside."
     show box
     with dissolve
