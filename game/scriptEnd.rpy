@@ -1,5 +1,9 @@
 label EndScene:
+    
     if HasBaby and Crowd:
+        scene bgFaerie
+        show crowdt
+        with Fade(1.0, 1.0, 1.0)
         "A violent rustling erupts around you, the tide of noise stopping you in your tracks."
         "A crowd of figures flow forth from the trees and the brush, an elegant wave of shapes that envelops you and Glen in its center."
         "You press close to one another, back to back, Glen clutching the baby and you gripping your knife."
@@ -59,7 +63,7 @@ label Apathy:
     scene bgFaerie
     with Fade(1.0, 1.0, 1.0)
     "And suddenly, a room."
-    "You’re not sure how you know it’s a room— the landscape still stretches for interminable miles in every direction— but you feel the confines."
+    "You’re not sure how you know it’s a room- the landscape still stretches for interminable miles in every direction- but you feel the confines."
     "You and Glen."
     "The forest is an illusion."
     "These walls are an illusion."
@@ -82,7 +86,7 @@ label Empathy:
     scene bgFaerie
     with Fade(1.0, 1.0, 1.0)
     "And suddenly, a room."
-    "You’re not sure how you know it’s a room— the landscape still stretches for interminable miles in every direction— but you feel the confines."
+    "You’re not sure how you know it’s a room- the landscape still stretches for interminable miles in every direction- but you feel the confines."
     "You and Glen."
     "The forest is an illusion."
     "These walls are an illusion."
@@ -103,7 +107,7 @@ label Empathy:
     "Glen’s hood falls back to show their sharp face, their eyes turned milky white, their mouth agape as an ill moan grates out of it."
     "It seems to scrape down their throat, something half beast, with their gaze turned toward the canopy."
     "Something in your memory flickers, like a zoetrope dancing across your mind."
-    G "\"It’s not— I don’t think I’m right, Harper.\""
+    G "\"It’s not- I don’t think I’m right, Harper.\""
     H "\"What does that mean?\""
     G "\"I’m not the way I should be.\""
     "And there’s a translucence to their skin, green veins feathering out along their temples."
@@ -115,7 +119,7 @@ label Empathy:
     "They look at the wall of your room, but are seeing much, much further beyond."
     G "\"Some things… could be done. People could be made to reckon.\""
     "The forest. Without them saying, you know it’s of what they speak."
-    H "\"Those things— Those people— \""
+    H "\"Those things- Those people- \""
     G "\"My people.\""
     H "\"We are your people, I am your people. This village, your parents. You have spent your life with us, is that not enough?\""
     H "\"Does that not give us some measure of worth?\""
@@ -140,7 +144,7 @@ label Violence:
     scene bgFaerie
     with Fade(1.0, 1.0, 1.0)
     "And suddenly, a room."
-    "You’re not sure how you know it’s a room— the landscape still stretches for interminable miles in every direction— but you feel the confines."
+    "You’re not sure how you know it’s a room- the landscape still stretches for interminable miles in every direction- but you feel the confines."
     "You and Glen."
     "The forest is an illusion."
     "These walls are an illusion."
@@ -168,7 +172,7 @@ label Violence:
     G "\"Wipe your hands. Clean them well. We can’t let anyone see.\""
     G "\"Just have to make it to the woods without suspicion. No one will follow us there.\""
     "The water in the bucket saturated with copper before you could even get underneath your nails."
-    "It’s still sitting there— his life in a banded, wooden thing fit to splinter. The way the candlelight shimmered off the surface was so… enthralling."
+    "It’s still sitting there- his life in a banded, wooden thing fit to splinter. The way the candlelight shimmered off the surface was so… enthralling."
     "You make sure to take the knife from him before you leave, no matter the mess."
     "Wiped off on his shirt, tucked into your belt."
     "You play it cool, follow Glen’s lead, walk out whistling as they bob and weave around you."
@@ -183,7 +187,7 @@ label Pacifism:
     scene bgFaerie
     with Fade(1.0, 1.0, 1.0)
     "And suddenly, a room."
-    "You’re not sure how you know it’s a room— the landscape still stretches for interminable miles in every direction— but you feel the confines."
+    "You’re not sure how you know it’s a room- the landscape still stretches for interminable miles in every direction- but you feel the confines."
     "You and Glen."
     "The forest is an illusion."
     "These walls are an illusion."
@@ -203,7 +207,7 @@ label Pacifism:
     "Memories start floating to the surface, like reflections on the water. They shimmer and shift, never staying in quite the same frame."
     "It’s hard to make out the details, the fine lines, but the players, the notions, can’t be missed."
     "Glen’s voice tries to swim to you, lethargic and low and unintelligible."
-    "It pounds inside your head, dull and throbbing as you try to hold onto something, anything. Sand slipping through your fingers. Glen, the forest, these flashes—"
+    "It pounds inside your head, dull and throbbing as you try to hold onto something, anything. Sand slipping through your fingers. Glen, the forest, these flashes-"
     V "\"At the solstice, before the full moon. They take only two when they could have many.\""
     V "\"Who has such generosity in their hearts?\""
     V "\"Who loves this village more than themselves?\""
@@ -222,7 +226,7 @@ label Alone:
     scene bgFaerie
     with Fade(1.0, 1.0, 1.0)
     "And suddenly, a room."
-    "You’re not sure how you know it’s a room— the landscape still stretches for interminable miles in every direction— but you feel the confines."
+    "You’re not sure how you know it’s a room- the landscape still stretches for interminable miles in every direction- but you feel the confines."
     "You, alone."
     "The forest is an illusion." 
     "These walls are an illusion."
@@ -268,7 +272,7 @@ label AloneBaby:
     scene bgFaerie
     with Fade(1.0, 1.0, 1.0)
     "And suddenly, a room."
-    "You’re not sure how you know it’s a room— the landscape still stretches for interminable miles in every direction— but you feel the confines."
+    "You’re not sure how you know it’s a room- the landscape still stretches for interminable miles in every direction- but you feel the confines."
     "You, alone."
     "The forest is an illusion." 
     "These walls are an illusion."

@@ -128,7 +128,7 @@ label start:
     hide harper
     with dissolve
     "You believe there might be something better out there, something brighter, something magic."
-    "Birds chirping, water running, the creak of a cart somewhere far down along the road—"
+    "Birds chirping, water running, the creak of a cart somewhere far down along the road-"
     "It all cuts out as you step beyond and into the forest."
     window hide
     show title at truecenter

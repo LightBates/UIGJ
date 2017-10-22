@@ -82,7 +82,7 @@ label Voices:
     "Glen notices it as surely as you, tugging their clothes closer and hitching their shoulders as though that might shield."
     #scene bgCave
     "You stop to study the sensation, to look for clouds darkening the canopy, a lake reflecting a colder breeze."
-    "You find a cave, or the mouth of it. It yawns in the distance — an open maw through which no light breaks — and... breathes?"
+    "You find a cave, or the mouth of it. It yawns in the distance - an open maw through which no light breaks - and... breathes?"
     C "\"Harper, sweet. Could it be?\""
     if HasBaby:
         show glenbabe at left
@@ -100,7 +100,7 @@ label Voices:
     "The voice drifts. It rides along that tepid gust, a breathy sigh."
     "It’s melodic, but discordant, like wind through holes in too smooth stone."
     "It sounds… like her. So like her, sad and sweet and not sure she wants to be heard."
-    G "\"But the forest— they thought her lost beyond the trees. Perhaps, well perhaps— like us.\""
+    G "\"But the forest- they thought her lost beyond the trees. Perhaps, well perhaps- like us.\""
     if HasBaby:
         hide glenbabe 
         with Dissolve(1.0)
@@ -154,7 +154,7 @@ label Voices2:
     "It’s a void that wants to grow, that erodes at you, breaking off bits and pieces to carry away downstream. Just so much silt."
     "And then? And then."
     C "\"Harper, sweet? Oh dear, oh dear. You’ve come to see your mother-dust.\""
-    C "\"She’s waited for you oh, so long. Poor thing, sweet thing, sad thing. She wept oh so long, hoping— only— to see you.\""
+    C "\"She’s waited for you oh, so long. Poor thing, sweet thing, sad thing. She wept oh so long, hoping- only- to see you.\""
     G "\"Stop. Please don’t. Stop!\" "
     "You turn wildly, thrashing in the empty to find the source of the echoing call."
     "It slides along the walls, slithers on the floor, drips slowly into your ear."

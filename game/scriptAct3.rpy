@@ -11,7 +11,7 @@ label Flame:
     "The struggle not to stop or stumble grows more and more difficult with every inch gained, but that glow gets brighter too, warmer, worth the awkward effort."
     "So you hope."
     "..."
-    "What you reach— the thing you see— it’s hard to get the grasp of. It moves, constant, shifting its shape from each second to the next."
+    "What you reach- the thing you see- it’s hard to get the grasp of. It moves, constant, shifting its shape from each second to the next."
     show flame at center
     with dissolve
     "A boy, a girl, a creature, a flame. Caught in a jar. It bats at the glass, curious face tipped to watch its voyeurs back."
@@ -35,7 +35,7 @@ label Flame:
     G "Glen draws back and turns to look at you, worrying their lip between their teeth."
     "The creature growls, writhes with its impatience." 
     G "\"We can’t just walk away from it! Even if we wanted to, where would we go? Back out into that black? We’d never make it out.\""
-    "It felt like hours before they spotted this ember, a day— at least— to reach it."
+    "It felt like hours before they spotted this ember, a day- at least- to reach it."
     "What would they get just walking away? Would they ever see light again?"
     "The trapped thing wailed, pressing at every surface, every groove, desperate."
     
@@ -54,7 +54,7 @@ label Flame:
             pause 2
             "Glen reaches for you blindly to pull you close as everything goes up, the path illuminated, but cut off by falling branches."
             "It rings you both, this inferno, travelling in concentric circles, devouring everything in its path."
-            "If you squint your eyes against it, brace yourself among the heat and peer deep, deep into the distance, you imagine you can see your home— the pebble path, the cold creek, the edge of the forest."
+            "If you squint your eyes against it, brace yourself among the heat and peer deep, deep into the distance, you imagine you can see your home- the pebble path, the cold creek, the edge of the forest."
             "As you burn."
             return
             
@@ -148,7 +148,7 @@ label TwoGlens:
                 $ renpy.notify("Violence +1\nApathy +1")
                 "You look to the trees, to the forest. You look at the Glens. You’re so... tired, of all this."
                 G "The crying Glen’s eyes meet yours, piercing. \"...I knew you would do this, someday.\""
-                G "The struggling Glen stops, and looks at the other, disbelieving. \"No... No, this isn’t—it isn’t right!\""
+                G "The struggling Glen stops, and looks at the other, disbelieving. \"No... No, this isn’t-it isn’t right!\""
                 "You turn back to the forest."
                 G "\"Don’t leave me here! I don’t belong here! Take me back! Take me BACK!\""
                 hide glen

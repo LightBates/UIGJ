@@ -94,8 +94,8 @@ label Merchant:
     "It starts as a tinkling, a clatter of glass and jangle of charms. The sound is familiar to those who trade in wares, traveling the dirt roads to larger cities with the hope of a livelihood."
     "You and Glen know it well, always excited for the promise of something new, something never before seen drifting into your sphere."
     "The creak of wheels and heaving, humid groan of something strange signal an approach."
-    "It’s—"
-    "There’s—"
+    "It’s-"
+    "There’s-"
     "He rounds a gnarly trunk, cart almost overturning, before tipping his gaze up and coming to a stop."
     show merchant at center
     with dissolve
@@ -108,7 +108,7 @@ label Merchant:
     with dissolve
     G "Glen steps to him, immediate, bouncing as they step to his stock."
     G "\"At us? At you! What a thing, what a wonderful, whimsical thing.\""
-    "The merchant grins, teeth— oh the teeth."
+    "The merchant grins, teeth- oh the teeth."
     M "\"Come, come and look. More I have, if your eye is for such things.\""
     "He stands aside, gestures his arms across the glowing bottles, stringed baubles, powders and liquids and… meats."
     "Something shifts."
@@ -128,7 +128,7 @@ label Merchant:
     "The merchant takes a low bow and then snuffles as he straightens out, moving to retake the front of his cart and take to the road." 
     H "\"Wait! Sir, you never told us the terms. This is unfair.\""
     "The merchant squints his eyes, sets his jaw, smacks his lips, once."
-    M "\"If you’re unhappy with your gains, perhaps you should barter better— next time.\""
+    M "\"If you’re unhappy with your gains, perhaps you should barter better- next time.\""
     "The merchant squares himself towards you, fingers flexing, daring for a challenge."
     
     menu:
