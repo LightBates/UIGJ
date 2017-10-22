@@ -303,16 +303,23 @@ label AloneBaby:
     "It picks up out of nowhere, stirring the leaves and making the circle dance."
     "The rustle of the foliage sounds like whispers, sliding over and sluicing through each other."
     "They’re harsh enough to catch, to illicit the jerk of your head, but no matter how hard you listen, you can’t make out the words."
+    show babe
+    with dissolve
     "The baby opens its mouth and yowls, the loudest and most painful sound the child has made in these woods, splintering in your ears."
     "Around you, the foliage of the fairy ring rises, grows tall."
     "Limbs sprout from flowers, their stems parting into legs parting into long clawed feet."
     "Fungi expand into hunched, saturnine beasts. Roaring monsters bloom around you and you have no way to retreat."
     "In your arms, the infant continues its drawn-out shriek and fights against your hold."
+    hide babe
+    show babevil
+    with dissolve
     "Before your eyes, it too changes"
     "Purple blossoms over cheeks and belly. Teeth sprout in that open mouth. Fingers extend, curve into long talons."
     "They match the horrors around you."
     "The tide of realization washes over you, heavy enough to bring you to your knees."
     "You are surrounded."
+    hide babevil
+    with dissolve
     "You cry out, but you know nobody can help you. Nobody will. Nobody is here."
     "Glen is gone"
     "..."

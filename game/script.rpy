@@ -27,6 +27,7 @@ image crowd = "/images/Characters/crowd_sprite.png"
 image crowdt = "/images/Characters/crowd_sprite_transparent.png"
 image snake = "/images/Characters/kind_of_upsetting_sprite.png"
 image woman = "/images/Characters/monster_lady_sprite.png"
+image babevil = "/images/Characters/BABEEVIL.png"
 
 
 image title = "/images/Backgrounds/title_sprite.png"
