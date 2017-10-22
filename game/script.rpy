@@ -87,31 +87,31 @@ label start:
     "You stop just outside it, turning to look at one another, just to be sure."
     show glen at center
     with dissolve
-    G "“What’re you waiting for?”"
+    G "\"What’re you waiting for?\""
     show glen at center:
         linear .5 left
     pause .5
     show harper at right
     with dissolve
-    H "“You know we’re not supposed to go in there, Glen. You know what they say is inside.”"
-    G "“When has that ever stopped us before?”"
+    H "\"You know we’re not supposed to go in there, Glen. You know what they say is inside.\""
+    G "\"When has that ever stopped us before?\""
     
     menu:
         "We should really listen to our parents.":
-            H "“We should really listen to our parents.”"
-            G "“You're such a staunch, Harper.”"
+            H "\"We should really listen to our parents.\""
+            G "\"You’re such a staunch, Harper.\""
             
         "Right as always, dear.":
-            H "“Right as always, dear."
+            H "\"Right as always, dear."
             
-        "Aren't you worried?":
-            H "“Aren't you worried?”"
-            G "“Aren't {i}you{/i} excited?”"
+        "Aren’t you worried?":
+            H "\"Aren’t you worried?\""
+            G "\"Aren’t {i}you{/i} excited?\""
             
-        "*Tap your belt where father's trusted knife sits* I suppose we're safe, no matter.":
+        "*Tap your belt where father’s trusted knife sits* I suppose we’re safe, no matter.":
             $ pacifism -= 1
             $ renpy.notify("Violence +1")
-            H "Your hand brushes against the knifes handle and you grin confidently “I suppose we're safe no matter.”"
+            H "Your hand brushes against the knife’s handle and you grin confidently \"I suppose we’re safe no matter.\""
             
     "Glen smiles at you, that smile that’s so sure the grass is always greener, and takes your hand."
     hide glen
