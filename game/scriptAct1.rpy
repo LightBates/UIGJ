@@ -69,8 +69,14 @@ label Treasure:
             "You don’t move. You chose to protect him. A figure lunges at you, swift and silent. But your blade connects."
             "The figure shrieks, and withdraws to its pack. They hiss with a hundred voices."
             Cr "\"Our blood is twice given, and will be thrice repaid.\""
+            hide crowdt
+            with dissolve
             "They disperse into the woods, vanishing."
+            show lost at center
+            with dissolve
             L "\"Please.\" It’s the man’s voice. He holds the bundle to you and Glen. \"Please take her. Don’t let them have her.\""
+            show glenbabe at left
+            with dissolve
             "Glen nods and takes the baby from him, holding her close."
             $ HasBaby = True
             $ TwiceGiven = True
