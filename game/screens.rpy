@@ -588,7 +588,7 @@ screen credits():
 
             label "[config.name!t]"
             text _("\nAlec \"If We Have Chekov's Baby We Have To Use It\" Garibay\n")
-            text _("Tash \"We Can't Kill Babies\" Faye\n")
+            text _("Tasha \"We Can't Kill Babies\" Chopine\n")
             text _("Light \"Can't or Won't?\" Bates\n")
             text _("Sam \"I'm Drawing The Baby If You Don't Stop Me\" Wilson\n")
             text _("Suzee \"Sounds Like We're Going to the Baby Zone\" Goodman\n")

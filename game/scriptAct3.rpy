@@ -136,3 +136,205 @@ label TwoGlens:
                 "Soon enough, you can’t hear them anymore."
 
 
+label Wraith:
+    $ Act2Scenes.pop(nex)
+    scene bgAct3
+    with Fade(2.0)
+    
+    "Each of the forest’s rustling hisses, distant crackles, animal cries impart the same message: you’ve gone too deep."
+    "You feel suffocated within the blanket of darkness. Glen trembles at your side."
+    if HasBaby:
+        "The baby fusses relentlessly, a miserable bundle."
+    "You come upon a clearing, of sorts. More a smattering of tree stumps than anything, but you feel the shift in the air around you."
+    "Somehow, impossibly, the world feels more oppressive. Dread coils around your spine."
+    "Someone is there."
+    "They weren’t there before, you’re certain, but they appear at the corner of your eye."
+    "You feel colder. Glen’s breath rattles in their chest."
+    W "“My, my. I haven’t had guests in such a long time.”"
+    "A woman - no, not quite a woman, not with the subtle wrongness in her form, the sinister cast to her eyes - circles you."
+    "Tendrils of thick shadow trail behind her, knitting a thick circle, a cage of icy dark that you can feel in your teeth."
+    H "“We're just traveling through.”"
+    "She clucks her tongue."
+    W "“You refuse my hospitality?”"
+    G "“We,” Glen squeaks, “we’re in a hurry, that’s all.”"
+    W "“You insult me,” the woman says, the words dripping languid from her tongue."
+    "The shadows coil closer."
+    H "“What do you want from us?”"
+    "The woman offers a snarling smile and reaches out to brush the backs of her fingers against your cheek."
+    "Her skin feels wrong - lacy like an insect, cool as a reptile."
+    W "“Merely some company.”"
+    "The dark sinks in, down to your marrow." 
+    "Glen shutters."
+    if HasBaby:
+        "The infant gives a weak, warbling cry."
+        W "“I see three of you,” she continues. “Surely you won’t miss just one.”"
+        jump WraithChoiceBaby
+    else: 
+        W "“There's two of you,” she continues. “Surely one of you can stay a while.”"
+        jump WraithChoice
+
+label WraithChoiceBaby:
+    "Dense and impenetrable, her shadow magic weighs on your shoulders, wraps around your throats."
+    "You know there is no way to run."
+    
+    menu:
+        "Offer Glen":
+            $ empathy -= 1
+            $ pacifism -= 1
+            $ renpy.notify("Violence +1\nApathy +1")
+            "You snatch the baby from Glen’s arms. The child squirms in your hold."
+            H "“Them. Take them.”"
+            "You shove Glen forward, drawing a broken sound from their throat."
+            G "“Harper! No, please!”"
+            "The woman cackles in delight and her shadowy cage retreats." 
+            "Before Glen can stagger away, the woman winds her arms around them."
+            W "“Don’t worry. We’ll have such fun together.”"
+            "She begins to hum an eerie tune, one that teases at the back of your memory but you can’t quite place."
+            "Tears stream down Glen’s cheeks as you scuttle forward."
+            "You clutch the infant. You run."
+            "Behind you, before you get too far, you hear Glen’s voice, carried on the wood’s anemic breeze."
+            G "“Harper, why?”"
+            "..."
+            "....."
+            "................"
+            pause 5
+            "You are alone now."
+            $ Alone = True
+            
+        "Offer the Baby":
+            $ pacifism -= 1
+            $ renpy.notify("Violence +1")
+            "You snatch the baby from Glen’s arms. The child squirms and whimpers in your hold."
+            H "“Take this!”"
+            G "“Harper!” Glen gasps."
+            "The woman smiles, toothy and vicious. She holds out her hands to receive the baby."
+            "Glen scrambles to take it back, but you dodge their reach."
+            H "“Glen, this is the only way,” you whisper."
+            "Glen weeps."
+            W "“Don’t worry,” the woman croons."
+            W "“I shan’t harm the child.”"
+            W "“No, no, I’ll take good care.”"
+            "You ease the baby into her waiting hands and her shadowy cage retreats."
+            "She begins to hum an eerie tune, one that teases at the back of your memory but you can’t quite place."
+            "You grab Glen’s hand, winding your fingers together."
+            H "“We have to look out for one another, no matter what.” You swallow."
+            H "“I’m sorry.”"
+            "Glen, tearful, nods."
+            "Together you run into the awaiting dark."            
+            
+        "Offer yourself":
+            $ empathy += 1
+            $ pacifism += 1
+            $ renpy.notify("Pacifism +1\nEmpathy +1")
+            "The encroaching shadow magic flows through your blood like ice, rendering your fingers and limbs and cheeks numb with cold."
+            "You look at Glen, huddled and shivering in its malevolent cloud."
+            "The infant clings to Glen, tiny fist grasping clothes, tiny cry growing smaller in the frigid circle."
+            "You swallow and muster your courage."
+            H "“Take me.”"
+            "The woman looks amused, her grin a twisted thing."
+            "She slithers close to you, winds her arms around your body, kisses your nose."
+            G "“Harper, no!” Glen sobs."
+            "The shadowy cage retreats."
+            H "“It has to be this way.” You try to sound reassuring."
+            H "“Don’t worry about me.”"
+            G "“But Harper!”"
+            "The woman begins to hum an eerie tune, one that teases at the back of your memory but you can’t quite place."
+            "She presses her cheek, damp and strange and ghoulish, to yours."
+            H "“Go now! You must go now, Glenny!” you hiss."
+            "Glen nods and stumbles forward, choking down their distress."
+            "The writhing shadows curl around you once again, the magic sharper than before, more heady and with impossibly more weight."
+            "As it creeps across your face, your eyes, you steal one last look at Glen darting away."
+            "Safe. At least they will be safe."
+            
+        "Try to kill the woman-creature":
+            ## POSSIBLE EXTRA BRANCH HERE - Fail if Violence is too low?
+            $ empathy += 1
+            $ pacifism -= 1
+            $ renpy.notify("Violence +1\nEmpathy +1")
+            "Even tangled within the confines of the twisted shadow magic, you’re able to grasp your father’s trusty knife, tucked at your side."
+            "You wrap your hand around it tight."
+            "The woman keeps pacing circles around you and grinning that poison grin."
+            W "“Who will it be, then? Who will it be? I simply must know.”"
+            G "“Please!” Glen begs. “Let us pass!”"
+            "You track her movements, their repetition. Calculating."
+            "Glen looks at you, eyes wide and frightened and lost."
+            "The baby mewls and trembles in their arms."
+            W "“Come on,” the woman growls. “My patience wanes.”"
+            H "“Apologies.”"
+            "You strike, forcing your arm through the magic’s heavy tendrils to slash and her throat."
+            "The knife makes a bare slash but it’s enough to catch the woman off guard, enough to shake the prison of shadows."
+            "She yowls. You snarl and advance on her." 
+            "You attack again, thrusting the knife into her neck with aim that’s half luck and half rage."
+            "The woman lurches back. Her scream, a terrible inhuman void of a tone, shoots pain through and between your ears."
+            "You pull out the knife, grab Glen’s hand and run as fast as you can."
+
+label WraithChoice:
+    "Dense and impenetrable, her shadow magic weighs on your shoulders, wraps around your throats."
+    "You know there is no way to run."
+    
+    menu:
+        "Offer Glen":
+            $ empathy -= 1
+            $ pacifism -= 1
+            $ renpy.notify("Violence +1\nApathy +1")
+            H "“Them. Take them.”"
+            "You shove Glen forward, drawing a broken sound from their throat."
+            G "“Harper! No, please!”"
+            "The woman cackles in delight and her shadowy cage retreats." 
+            "Before Glen can stagger away, the woman winds her arms around them."
+            W "“Don’t worry. We’ll have such fun together.”"
+            "She begins to hum an eerie tune, one that teases at the back of your memory but you can’t quite place."
+            "Tears stream down Glen’s cheeks as you scuttle forward."
+            "You run."
+            "Behind you, before you get too far, you hear Glen’s voice, carried on the wood’s anemic breeze."
+            G "“Harper, why?”"
+            "..."
+            "....."
+            "................"
+            pause 5
+            "You are alone now."
+            $ Alone = True
+            
+        "Offer yourself":
+            $ empathy += 1
+            $ pacifism += 1
+            $ renpy.notify("Pacifism +1\nEmpathy +1")
+            "The encroaching shadow magic flows through your blood like ice, rendering your fingers and limbs and cheeks numb with cold."
+            "You look at Glen, huddled and shivering in its malevolent cloud."
+            "You swallow and muster your courage."
+            H "“Take me.”"
+            "The woman looks amused, her grin a twisted thing."
+            "She slithers close to you, winds her arms around your body, kisses your nose."
+            G "“Harper, no!” Glen sobs."
+            "The shadowy cage retreats."
+            H "“It has to be this way.” You try to sound reassuring."
+            H "“Don’t worry about me.”"
+            G "“But Harper!”"
+            "The woman begins to hum an eerie tune, one that teases at the back of your memory but you can’t quite place."
+            "She presses her cheek, damp and strange and ghoulish, to yours."
+            H "“Go now! You must go now, Glenny!” you hiss."
+            "Glen nods and stumbles forward, choking down their distress."
+            "The writhing shadows curl around you once again, the magic sharper than before, more heady and with impossibly more weight."
+            "As it creeps across your face, your eyes, you steal one last look at Glen darting away."
+            "Safe. At least Glen will be safe."
+            
+        "Try to kill the woman-creature":
+            ## POSSIBLE EXTRA BRANCH HERE - Fail if Violence is too low?
+            $ empathy += 1
+            $ pacifism -= 1
+            $ renpy.notify("Violence +1\nEmpathy +1")
+            "Even tangled within the confines of the twisted shadow magic, you’re able to grasp your father’s trusty knife, tucked at your side."
+            "You wrap your hand around it tight."
+            "The woman keeps pacing circles around you and grinning that poison grin."
+            W "“Who will it be, then? Who will it be? I simply must know.”"
+            G "“Please!” Glen begs. “Let us pass!”"
+            "You track her movements, their repetition. Calculating."
+            "Glen looks at you, eyes wide and frightened and lost."
+            W "“Come on,” the woman growls. “My patience wanes.”"
+            H "“Apologies.”"
+            "You strike, forcing your arm through the magic’s heavy tendrils to slash and her throat."
+            "The knife makes a bare slash but it’s enough to catch the woman off guard, enough to shake the prison of shadows."
+            "She yowls. You snarl and advance on her." 
+            "You attack again, thrusting the knife into her neck with aim that’s half luck and half rage."
+            "The woman lurches back. Her scream, a terrible inhuman void of a tone, shoots pain through and between your ears."
+            "You pull out the knife, grab Glen’s hand and run as fast as you can."

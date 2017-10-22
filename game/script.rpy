@@ -43,11 +43,12 @@ label start:
     
     $ Act1Scenes = ["Treasure", "Merchant", "BirchBox"]
     $ Act2Scenes = ["InTheTree", "Voices", "Boa"]
-    $ Act3Scenes = ["Flame", "TwoGlens"]
+    $ Act3Scenes = ["Flame", "TwoGlens", "Wraith"]
     
     #Flags
     $ HasBaby = False
     $ TwiceGiven = False
+    $ Alone = False
     
     # empathy++ = caring for others, empathy-- = apathy
     $ empathy = 0
