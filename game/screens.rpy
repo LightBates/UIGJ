@@ -555,7 +555,7 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _("Made with {a=https://www.renpy.org/}Ren’Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 
 
@@ -588,11 +588,11 @@ screen credits():
         vbox:
 
             label "[config.name!t]"
-            text _("\nAlec \"If We Have Chekov's Baby We Have To Use It\" Garibay\n")
-            text _("Tasha \"We Can't Kill Babies\" Chopine\n")
-            text _("Light \"Can't or Won't?\" Bates\n")
-            text _("Sam \"I'm Drawing The Baby If You Don't Stop Me\" Wilson\n")
-            text _("Suzee \"Sounds Like We're Going to the Baby Zone\" Goodman\n")
+            text _("\nAlec \"If We Have Chekov’s Baby We Have To Use It\" Garibay\n")
+            text _("Tasha \"We Can’t Kill Babies\" Chopine\n")
+            text _("Light \"Can’t or Won’t?\" Bates\n")
+            text _("Sam \"I’m Drawing The Baby If You Don’t Stop Me\" Wilson\n")
+            text _("Suzee \"Sounds Like We’re Going to the Baby Zone\" Goodman\n")
             
             
 ## This is redefined in options.rpy to add text to the about screen.
@@ -761,13 +761,13 @@ screen preferences():
             hbox:
                 box_wrap True
 
-                if renpy.variant("pc"):
+#                if renpy.variant("pc"):
 
-                    vbox:
-                        style_prefix "radio"
-                        label _("Display")
-                        textbutton _("Window") action Preference("display", "window")
-                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
+#                    vbox:
+#                        style_prefix "radio"
+#                        label _("Display")
+#                        textbutton _("Window") action Preference("display", "window")
+#                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
 
                 #vbox:
                     #style_prefix "radio"

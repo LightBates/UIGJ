@@ -51,6 +51,8 @@ define V = Character("Village Elder")
 
 label start:
     
+    $_game_menu_screen = "preferences"
+    
     $ Act1Scenes = ["Treasure", "Merchant", "BirchBox"]
     $ Act2Scenes = ["InTheTree", "Voices", "Boa"]
     $ Act3Scenes = ["Flame", "TwoGlens", "Wraith"]
