@@ -761,12 +761,12 @@ screen preferences():
             hbox:
                 box_wrap True
 
-#                if renpy.variant("pc"):
+                if renpy.variant("pc"):
 
-#                    vbox:
-#                        style_prefix "radio"
-#                        label _("Display")
-#                        textbutton _("Window") action Preference("display", "window")
+                    vbox:
+                        style_prefix "radio"
+                        label _("Display")
+                        textbutton _("Window") action Preference("display", "window")
 #                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
 
                 #vbox:

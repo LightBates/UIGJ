@@ -57,6 +57,10 @@ label Treasure:
             $ renpy.notify("Violence +1\nEmpathy +1")
             "You draw your knife, as Glen eases him to the ground behind you."
             hide lost
+            hide glen
+            hide harper
+            show crowdt at center
+            with dissolve
             "A crowd emerges from the brush. Their eyes fall upon you, and then him."
             Cr "\"Step aside. He has stolen from us, and must be punished.\""
             G "\"What has he stolen?\""
@@ -75,9 +79,13 @@ label Treasure:
             $ pacifism -= 1
             $ empathy -= 1
             $ renpy.notify("Violence +1\nApathy +1")
+            hide glen
+            hide harper
+            hide lost
+            show crowdt at center
+            with dissolve
             "As he collapses onto the ground before you, a crowd emerges from the brush. Their eyes fall upon him, and their movements are swift."
             "They take his treasure, and he screams like a man dying. It rings in your ears, familiar."
-            hide lost
             "As they vanish into the shadows, you see that they did not kill him. But you see in his downward eyes that he has nothing more to live for."
             "You take Glen’s hand and head deeper into the woods."
             

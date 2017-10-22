@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "1.2.1"
+define config.version = "1.2.2"
 
 
 ## Text that is placed on the game's about screen. To insert a blank line
@@ -111,11 +111,14 @@ define config.window_hide_transition = Dissolve(.2)
 
 ## Preference defaults #########################################################
 
-## Controls the default text speed. The default, 0, is infinite, while any other
-## number is the number of characters per second to type out.
-
+## Launches in Windowed Mode, Disables Rollback
 
 define config.rollback_enabled = False
+define config.default_fullscreen = False
+default preferences.display = "window"
+
+## Controls the default text speed. The default, 0, is infinite, while any other
+## number is the number of characters per second to type out.
 
 default preferences.text_cps = 50
 
@@ -125,7 +128,7 @@ default preferences.text_cps = 50
 
 default preferences.afm_time = 15
 
-default preferences.display = "window"
+
 
 ## Save directory ##############################################################
 ##
