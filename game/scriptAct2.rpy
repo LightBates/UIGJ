@@ -1,7 +1,7 @@
 label InTheTree:
     $ Act2Scenes.pop(nex)
     scene bgAct2
-    with Fade(2.0)
+    with Fade(1.0, 1.0, 1.0)
     "The forest runs deeper than any you’ve entered. For a moment, you imagine weaving through its gnarled roots and branches forever."
     G "“Are we lost?” Glen asks as you push the thoughts from your mind."
     H "“No,” you respond firmly. “We just haven’t found our way yet.”"
@@ -66,7 +66,7 @@ label InTheTree:
 label Voices:
     $ Act2Scenes.pop(nex)
     scene bgAct2
-    with Fade(2.0)
+    with Fade(1.0, 1.0, 1.0)
     "It’s the cool, damp. It seeps through your skin and settles somewhere along the bones."
     "Glen notices it as surely as you, tugging their clothes closer and hitching their shoulders as though that might shield."
     "You stop to study the sensation, to look for clouds darkening the canopy, a lake reflecting a colder breeze."
@@ -200,7 +200,7 @@ label Voices2:
 label Boa:
     $ Act2Scenes.pop(nex)
     scene bgAct2
-    with Fade(2.0)
+    with Fade(1.0, 1.0, 1.0)
     
     "The shimmering majesty of the forest edge gives way to cool air and shadow as you move deeper."
     "Glen hovers near you."

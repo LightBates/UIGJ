@@ -1,7 +1,7 @@
 label Treasure:
  # These display lines of dialogue.
     scene bgAct1
-    with Fade(2.0)
+    with Fade(1.0, 1.0, 1.0)
     $ Act1Scenes.pop(nex)
     "Another clearing opened before them. You walk toward the center, looking for another path out."
     show glen at left
@@ -81,7 +81,7 @@ label Treasure:
     
 label Merchant:
     scene bgAct1
-    with Fade(2.0)
+    with Fade(1.0, 1.0, 1.0)
     $ Act1Scenes.pop(nex)
     "It starts as a tinkling, a clatter of glass and jangle of charms. The sound is familiar to those who trade in wares, traveling the dirt roads to larger cities with the hope of a livelihood."
     "You and Glen know it well, always excited for the promise of something new, something never before seen drifting into your sphere."
@@ -173,7 +173,7 @@ label Merchant:
     
 label BirchBox:
     scene bgAct1
-    with Fade(2.0)
+    with Fade(1.0, 1.0, 1.0)
     $ Act1Scenes.pop(nex)
     
     "Glen, arms akimbo, zips between trees, their steps so buoyant and sure that it looks more like floating than running."

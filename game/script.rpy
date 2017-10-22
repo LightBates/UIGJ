@@ -96,7 +96,7 @@ label start:
             H "“Right as always, dear."
             
         "Aren't you worried?":
-            H "“Aren't you worried about what's inside?”"
+            H "“Aren't you worried?”"
             G "“Aren't {i}you{/i} excited?”"
             
         "*Tap your belt where father's trusted knife sits* I suppose we're safe, no matter.":
@@ -120,10 +120,3 @@ label start:
     with Dissolve(2.0)
     $ nex = renpy.random.randint(0, len(Act1Scenes) - 1)
     $ renpy.jump(Act1Scenes[nex])
-    
-label TheForest:
-    $ Act1Scenes.pop(nex)
-    show text "THE FOREST" at truecenter
-    "To Be Continued"
-    return
-    

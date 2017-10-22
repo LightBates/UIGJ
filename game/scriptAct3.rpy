@@ -1,7 +1,7 @@
 label Flame: 
     $ Act2Scenes.pop(nex)
     scene bgFlame
-    with Fade(2.0)
+    with Fade(1.0, 1.0, 1.0)
     "It’s dark, so dark in the center of the forest."
     "Here the things that creep and call do so on the periphery, under cover."
     "It’s a place for nocturnal things, no matter the time. Their eyes glint and their wings flutter and the weight of them is everywhere."
@@ -71,7 +71,7 @@ label Flame:
 label TwoGlens:
     $ Act2Scenes.pop(nex)
     scene bgAct3
-    with Fade(2.0)
+    with Fade(1.0, 1.0, 1.0)
     "The forest runs deep, endless. It’s impossible to say how long you’ve been here, impossible to say how you might get out."
     "You push dark branches out of your way, then turn to hold them open for Glen behind you. But Glen isn’t there."
     H "“Glen?” You call, looking back."
@@ -146,7 +146,7 @@ label TwoGlens:
 label Wraith:
     $ Act2Scenes.pop(nex)
     scene bgAct3
-    with Fade(2.0)
+    with Fade(1.0, 1.0, 1.0)
     
     "Each of the forest’s rustling hisses, distant crackles, animal cries impart the same message: you’ve gone too deep."
     "You feel suffocated within the blanket of darkness. Glen trembles at your side."
