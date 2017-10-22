@@ -219,6 +219,7 @@ label BirchBox:
             $ pacifism += 1
             $ empathy += 1
             $ renpy.notify("Pacifism +1\nEmpathy +1")
+            hide babe with dissolve
             "You lift the child from the box, gather it close to your chest, and rock it gently."
             "Already, more color rises to its cheeks. The baby curls its body against you and your warmth, and you murmur to it."
             H "\"I’ve got you. You’re safe now. I have you.\""
@@ -264,6 +265,7 @@ label BirchBox:
             H "\"You decide.\""
             "It only takes Glen a few moments."
             show glenbabe at left
+            hide babe
             with dissolve
             "They lift the baby from the box with shaking hands, scraping their knuckles on the edge of the hollow as they angle the child out."
             "The baby offers a watery cry. Glen tucks it close to their chest and looks at you with wide eyes."
