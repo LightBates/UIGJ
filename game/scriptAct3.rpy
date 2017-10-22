@@ -116,7 +116,7 @@ label TwoGlens:
                 $ empathy += 1            
                 $ renpy.notify("Violence +2\nEmpathy +1")
                 G "As you step toward the struggling Glen, the other begins to sob. “Please. Please, Harper. Don’t do this.”"
-                if HasBaby = true:
+                if HasBaby:
                     "You kneel by the struggling Glen, and shift the baby into one arm as the other hand draws the knife."
                     "They freeze at the sight of it, eyes wide with terror."
                 else:

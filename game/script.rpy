@@ -7,7 +7,7 @@ init python:
 # Declare Background Images
 image bgAct1 = "/images/Backgrounds/act_1_bg.png"
 image bgAct2 = "/images/Backgrounds/act_2_bg.png"
-image bgAct3 = "/images/Backgrounds/act_2_bg.png"
+image bgAct3 = "/images/Backgrounds/act_3_bg.png"
 image bgFlame = "/images/Backgrounds/flame_bg.png"
 
 # Declare Sprites

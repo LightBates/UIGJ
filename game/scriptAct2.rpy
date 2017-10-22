@@ -17,7 +17,7 @@ label InTheTree:
     G "“Harper.”"
     "Your eyes fall to the left, where an ancient rope wraps around the tree and up into the canopy, where the lights stare back."
     G "You feel a tug at your sleeve. “We need to go, Harper. It’ll catch us if we don’t. Please.”"
-    if HasBaby = true:
+    if HasBaby:
         G "Glen looks at the baby in their arms, then back at you. “Harper.”"
     
     menu:

@@ -93,6 +93,11 @@ label Merchant:
     with dissolve
     M "“Aha! Oh my. Look at the heft of you two.”"
     "His gaze is more than assessing, it scores against your skin as the beady black flit from you to Glen and back again. "
+    show merchant at center:
+        linear .5 right
+    pause .5
+    show glen at left
+    with dissolve
     G "Glen steps to him, immediate, bouncing as they step to his stock."
     G "“At us? At you! What a thing, what a wonderful, whimsical thing.”"
     "The merchant grins, teeth— oh the teeth."
@@ -179,16 +184,26 @@ label BirchBox:
     "Glen, arms akimbo, zips between trees, their steps so buoyant and sure that it looks more like floating than running."
     "Of course, you aren’t far behind – where Glen goes, you follow, though you feel much less effervescent."
     "The forest composes a song of groaning branches and snapping twigs, noisy in a too-quiet way, which Glen and their bubbling laughter pay little mind."
+    show harper at right
+    with dissolve
     H "“Don’t you think we should be more quiet?” you whisper."
     "The dissonance between Glen’s bright laugh and the woods' low scuttle makes you uneasy."
+    show glen at left
+    with dissolve
     G "“Honestly, Harper, you worry too much!”"
     "A large boulder, towering under its mossy blanket, catches Glen’s eye and they breeze towards it."
+    hide glen
+    with dissolve
     "You drag your palm against the gnarled bark of an old, stooping oak tree, circling the heft of its circumference while you try to ease the roiling of your stomach."
     "Your hand catches on a knot – no, a hollow – in the tree."
     "You pause and peer inside."
+    show box
+    with dissolve
     "A box balances precariously within."
     "Its deliberate placement sparks your curiosity, and you can’t resist; with careful hands, you lift the lid away."
     "The contents wring a gasp from your windpipe."
+    hide box with dissolve
+    show babe with dissolve
     "An infant, diminutive and doughy, bare and bluish with cold, slumbers inside the box."
 
     menu:
@@ -199,6 +214,8 @@ label BirchBox:
             "You lift the child from the box, gather it close to your chest, and rock it gently."
             "Already, more color rises to its cheeks. The baby curls its body against you and your warmth, and you murmur to it."
             H "“I’ve got you. You’re safe now. I have you.”"
+            show glen at left
+            with dissolve
             "Glen’s footsteps approach. They hum a tune that tickles at your memory, but you can’t quite place it. You turn."
             "Glen stops short, gaze wide and watery on the infant you cradle."
             G "“Is that…?”"
@@ -219,6 +236,7 @@ label BirchBox:
             "Taking it along with you would not only be futile, but it could slow you, make your more vulnerable in the deeper forest."
             "It is better, you decide, to grant this creature rest."
             "..."
+            hide babe with dissolve
             "You return the lid to the box."
             H "“Come on, Glen. We should keep moving.”"
         
@@ -227,6 +245,7 @@ label BirchBox:
             $ empathy -= 1
             $ renpy.notify("Pacifism +1\nApathy +1")
             H "“Glen!” you call. “Glen, come see this.”"
+            show glen at left with dissolve
             "The baby stirs. Glen climbs down from their perch on the boulder and returns to your side."
             "They breathe a noise - a whimper - in shock and sympathy."
             G "“Is that…?”"
@@ -236,6 +255,8 @@ label BirchBox:
             H "“I don’t know,” you mumble."
             H "“You decide.”"
             "It only takes Glen a few moments."
+            show glenbabe at left
+            with dissolve
             "They lift the baby from the box with shaking hands, scraping their knuckles on the edge of the hollow as they angle the child out."
             "The baby offers a watery cry. Glen tucks it close to their chest and looks at you with wide eyes."
             G "“We can’t just leave her.”"
