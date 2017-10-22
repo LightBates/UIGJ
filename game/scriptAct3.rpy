@@ -7,10 +7,10 @@ label Flame:
     "It’s a place for nocturnal things, no matter the time. Their eyes glint and their wings flutter and the weight of them is everywhere."
     "But there is a glow, deeper, deeper."
     "It starts as a pinprick between the shadow of the trees, but the longer you walk, the more it feeds."
-    "Glen is clutched to you, or you to them. It takes the two to navigate the roots and rocks, stepping slowly over every bump and break in the terrain."
+    "Glen is clutched to you, or you to them. It takes combined effort to navigate the roots and rocks, stepping slowly over every bump and break in the terrain."
     "The struggle not to stop or stumble grows more and more difficult with every inch gained, but that glow gets brighter too, warmer, worth the awkward effort."
     "So you hope."
-    pause 1
+    "..."
     "What you reach— the thing you see— it’s hard to get the grasp of. It moves, constant, shifting its shape from each second to the next."
     "A boy, a girl, a creature, a flame. Caught in a jar. It bats at the glass, curious face tipped to watch its voyeurs back."
     "Tap, tap, tap. Shift, hiss, crackle."

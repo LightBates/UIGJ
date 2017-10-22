@@ -207,7 +207,7 @@ label Boa:
     "Even their instinct for exploration seems dampened by the dimming light."
     H "“Don’t worry, Glenny. We’ll find our way out of here soon.”"
     "Glen reaches out and touches your shoulder."
-    if $ HasBaby:
+    if HasBaby:
         "The baby coos in Glen’s arms, which calms some of the tension in their shoulders."
     "The snapping sound of breaking foliage calls your attention back to the path in front of you."
     "A stranger staggers from the brush, hunched over, scraped and bruised and -- oh."
@@ -253,7 +253,7 @@ label Boa:
             H "“There’s a village at the edge of these woods. You may find more help there.”"
             "The stranger’s brows furrow together. He cradles his mangled arm."
             S "“You will not come?”"
-            H "“No."
+            H "“No.”"
                         
         "Flee with Glen":
             $ pacifism += 1

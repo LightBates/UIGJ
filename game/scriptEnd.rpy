@@ -1,29 +1,29 @@
 label EndScene:
-    if ($ math.fabs(empathy) > math.fabs(pacifism)):
-        if $ empathy > 0:
+    if ( math.fabs(empathy) > math.fabs(pacifism)):
+        if empathy > 0:
             jump Empathy
         else:
             jump Apathy
-    elif ($ math.fabs(empathy) < math.fabs(pacifism)):
-        if $ pacifism > 0:
+    elif ( math.fabs(empathy) < math.fabs(pacifism)):
+        if pacifism > 0:
             jump Pacifism
         else:
             jump Violence
     else: 
-        if $ renpy.random.randint(0,1) < 1:
-            if $ empathy >= 0:
+        if  renpy.random.randint(0,1) < 1:
+            if empathy >= 0:
                 jump Empathy
             else:
                 jump Apathy
         else:
-            if $ pacifism >= 0:
+            if pacifism >= 0:
                 jump Pacifism
             else:
                 jump Violence
     
     
           
-    
+    ###Might need rework compared to all the other endings
 label Apathy:
     "Nothing matters. There is no horror, no specter they can bring before you that will bring fear or hesitation into your heart."
     "Nothing in this forest has fazed you, and nothing ever will."
