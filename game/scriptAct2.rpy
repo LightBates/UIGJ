@@ -3,7 +3,15 @@ label InTheTree:
     scene bgAct2
     with Fade(1.0, 1.0, 1.0)
     "The forest runs deeper than any you’ve entered. For a moment, you imagine weaving through its gnarled roots and branches forever."
+    if HasBaby:
+        show glenbabe at left
+        with dissolve
+    else:
+        show glen at left
+        with dissolve
     G "“Are we lost?” Glen asks as you push the thoughts from your mind."
+    show harper at right
+    with dissolve
     H "“No,” you respond firmly. “We just haven’t found our way yet.”"
     "A wail comes from a break in the leaves above you, but all you can see is black."
     if HasBaby:
@@ -11,14 +19,15 @@ label InTheTree:
     else:
         G "“W-What was that?” Glen asks, latching onto your sleeve. “It sounded like a monster.”"
     "You would tell Glen there are no such thing as monsters, but you don’t lie to Glen."
+    "..."
     "You squint at the shadows of the tree, and see two lights. They look like a break in the leaves, where the sun shines through, but then they blink."
     "The voice comes again, ragged and desperate."
     "“Something’s got me! I can’t... get down...!” it pleads, as leaves fall from above you and down to the forest floor."
     G "“Harper.”"
-    "Your eyes fall to the left, where an ancient rope wraps around the tree and up into the canopy, where the lights stare back."
+    "Your eyes fall to the left; an ancient rope wraps around the tree and up into the canopy, where the lights stare back."
     G "You feel a tug at your sleeve. “We need to go, Harper. It’ll catch us if we don’t. Please.”"
     if HasBaby:
-        G "Glen looks at the baby in their arms, then back at you. “Harper.”"
+        G "Glen looks at the baby in their arms, then back at you. “Harper...”"
     
     menu:
         "Cut the rope":
@@ -33,6 +42,7 @@ label InTheTree:
             else:
                 "You step away from the tree, and don’t turn to look back. Glen holds out a trembling hand, and you take it until the shaking stops."
                 "Something thuds in the woods behind you."
+                
         "Climb up the tree":
             $ pacifism += 1
             $ empathy += 1
@@ -43,13 +53,14 @@ label InTheTree:
             "The person opens their mouth to scream again, but the shadow clamps it shut."
             "The knife gleams in the belt at your waist. You pull it free and brandish it at the shadow with two eyes."
             "Its form recoils and splinters, split not by the blade but by the light it reflects."
-            "The shadow dissipates, hit by specks of light filtered through leaves and perfected by the knife’s perfect edge."
+            "The shadow dissipates, hit by specks of light filtered through leaves and perfected by the knife’s edge."
             "You cut the ropes, carefully."
+            
         "Leave with Glen":
             if HasBaby:
                 $ pacifism -= 1
-                $ empathy += 2
-                $ renpy.notify("Violence +1\nEmpathy +2")
+                $ empathy += 1
+                $ renpy.notify("Violence +1\nEmpathy +1")
             else:
                 $ pacifism -= 1
                 $ empathy += 1
@@ -69,11 +80,20 @@ label Voices:
     with Fade(1.0, 1.0, 1.0)
     "It’s the cool, damp. It seeps through your skin and settles somewhere along the bones."
     "Glen notices it as surely as you, tugging their clothes closer and hitching their shoulders as though that might shield."
+    scene bgCave
     "You stop to study the sensation, to look for clouds darkening the canopy, a lake reflecting a colder breeze."
     "You find a cave, or the mouth of it. It yawns in the distance — an open maw through which no light breaks — and... breathes?"
     C "“Harper, sweet. Could it be?”"
+    if HasBaby:
+        show glenbabe at left
+        with dissolve
+    else:
+        show glen at left
+        with dissolve
     G "“Could it be?”"
     "Glen turns to you, expression brittle."
+    show harper at right
+    with dissolve
     H "“No, No.” you say, as much to Glen as to yourself."
     H "“Definitely not, how could it be?” "
     C "“Harper, sweet. Come and see me. Don’t you want to see your mother?”"
@@ -81,6 +101,12 @@ label Voices:
     "It’s melodic, but discordant, like wind through holes in too smooth stone."
     "It sounds… like her. So like her, sad and sweet and not sure she wants to be heard."
     G "“But the forest— they thought her lost beyond the trees. Perhaps, well perhaps— like us.”"
+    if HasBaby:
+        hide glenbabe 
+        with Dissolve(5.0)
+    else:
+        hide glen
+        with Dissolve(5.0)
     "You remember."
     "The bits of her dress, shredded through the tangles of branches."
     "The smell of burnt bread."
@@ -175,6 +201,12 @@ label Voices2:
             $ pacifism += 1
             $ empathy += 1
             $ renpy.notify("Pacifism +1\nEmpathy +1")
+            if HasBaby:
+                show glenbabe at left
+                with dissolve
+            else:
+                show glen at left
+                with dissolve
             G "“We can’t stay here. You can’t stay here.”"
             "They put their hand on your shoulder, then run their fingers up and through your hair."
             "You’re not sure you like it, but the touch, it grounds you."
@@ -205,12 +237,28 @@ label Boa:
     "The shimmering majesty of the forest edge gives way to cool air and shadow as you move deeper."
     "Glen hovers near you."
     "Even their instinct for exploration seems dampened by the dimming light."
+    show harper at right
+    with dissolve
     H "“Don’t worry, Glenny. We’ll find our way out of here soon.”"
+    if HasBaby:
+        show glenbabe at left
+        with dissolve
+    else:
+        show glen at left
+        with dissolve
     "Glen reaches out and touches your shoulder."
     if HasBaby:
         "The baby coos in Glen’s arms, which calms some of the tension in their shoulders."
     "The snapping sound of breaking foliage calls your attention back to the path in front of you."
+    if HasBaby:
+        hide glenbabe
+        with dissolve
+    else:
+        hide glen
+        with dissolve
     "A stranger staggers from the brush, hunched over, scraped and bruised and -- oh."
+    show snake at left
+    with dissolve
     "A snake, sinuous and monumental, twists around his body, wound tight."
     "Squeezing."
     "You see now that one of the stranger’s arms hangs limp, a battered skin sack of crunched bones."

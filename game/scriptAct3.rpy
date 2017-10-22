@@ -12,11 +12,18 @@ label Flame:
     "So you hope."
     "..."
     "What you reach— the thing you see— it’s hard to get the grasp of. It moves, constant, shifting its shape from each second to the next."
+    show flame at center
+    with dissolve
     "A boy, a girl, a creature, a flame. Caught in a jar. It bats at the glass, curious face tipped to watch its voyeurs back."
     "Tap, tap, tap. Shift, hiss, crackle."
     "Despite the burn, no smoke gathers to cloud the view. This thing, it’s white-hot at the center, molten, throwing off coronas of light and warmth."
     F "“Out. Out!”"
     F "It taps the glass, shifts, pools against the edge and burns."
+    show flame at center:
+        linear .5 right
+    pause .5
+    show glen at left
+    with dissolve
     G "“We have to let it out, don’t we? It’s not right to leave it like this.”"
     "Glen moves to approach the jar, and the dark almost seems to deepen, the shadows trying their best to press against every inch the light will give."
     "Tendrils reach out like fingers, trees creaking and moaning, groaning, begging ‘no.’"  
@@ -77,6 +84,10 @@ label TwoGlens:
     H "“Glen?” You call, looking back."
     H "“Glen?” Again, louder, firmer."
     G "“Over here!” Glen’s voice comes from ahead, echoing. You wonder how they got in front of you."
+    show glen at left
+    with dissolve
+    show glenmirror at right
+    with dissolve
     "You part the branches again, and see the scene, mirrored. Glen wrapped in vines, tied to a stump and next to them... Glen is wrapped in vines, tied to a stump."
     if HasBaby:
         "You hear a murmur beside you. The baby lies in a pile of leaves, and you pick it up in Glen’s stead."
@@ -100,21 +111,23 @@ label TwoGlens:
         menu:
             "Free crying Glen":
                 $ pacifism += 1
-                $ empathy += 2            
-                $ renpy.notify("Pacifism +1\nEmpathy +2")
+                $ empathy += 1            
+                $ renpy.notify("Pacifism +1\nEmpathy +1")
                 if HasBaby:
                     "You walk slowly to the crying Glen, and shift the baby into one arm as the other hand draws the knife. You cut the vines."
                 else:
                     "You walk slowly to the right Glen, and draw the knife. The vines are tight against them, but the knife severs them easily."
+                hide glen 
+                with Dissolve(5.0)
                 G "Glen’s tears return in full force as they hug you. “Please d-don’t leave me here.”"
                 G "The other Glen struggles. “No! No, let me go! I don’t belong here! Take me back! Take me home!”"
                 "You turn your back on them."
                 jump EndScene
 
             "Free struggling Glen":
-                $ pacifism -= 2
+                $ pacifism -= 1
                 $ empathy += 1            
-                $ renpy.notify("Violence +2\nEmpathy +1")
+                $ renpy.notify("Violence +1\nEmpathy +1")
                 G "As you step toward the struggling Glen, the other begins to sob. “Please. Please, Harper. Don’t do this.”"
                 if HasBaby:
                     "You kneel by the struggling Glen, and shift the baby into one arm as the other hand draws the knife."
@@ -122,6 +135,8 @@ label TwoGlens:
                 else:
                     "You kneel by the struggling Glen, and draw the knife. They freeze at the sight of it, eyes wide with terror."
                 "As you cut the struggling Glen’s bonds, they stare at the other, who is becoming increasingly desperate."
+                hide glenmirror
+                with Dissolve(5.0)
                 G "“It wasn’t not my fault! It was them! They switched us! Harper no, I love you!”"
                 H "You’ve made your choice. “Let’s go, Glen.”"
                 G "“Thank you. Thank you, Harper. I promise. I promise I won’t ever leave you again.”"
@@ -130,8 +145,8 @@ label TwoGlens:
 
             "Leave":
                 $ pacifism -= 1
-                $ empathy -= 2            
-                $ renpy.notify("Violence +1\nApathy +2")
+                $ empathy -= 1            
+                $ renpy.notify("Violence +1\nApathy +1")
                 "You look to the trees, to the forest. You look at the Glens. You’re so... tired, of all this."
                 G "The crying Glen’s eyes meet yours, piercing. “...I knew you would do this, someday.”"
                 G "The struggling Glen stops, and looks at the other, disbelieving. “No... No, this isn’t—it isn’t right!”"
@@ -157,9 +172,16 @@ label Wraith:
     "Someone is there."
     "They weren’t there before, you’re certain, but they appear at the corner of your eye."
     "You feel colder. Glen’s breath rattles in their chest."
+    show woman at center
+    with dissolve
     W "“My, my. I haven’t had guests in such a long time.”"
     "A woman - no, not quite a woman, not with the subtle wrongness in her form, the sinister cast to her eyes - circles you."
     "Tendrils of thick shadow trail behind her, knitting a thick circle, a cage of icy dark that you can feel in your teeth."
+    show woman at center:
+        linear .5 left
+    pause .5
+    show harper at right
+    with dissolve
     H "“We're just traveling through.”"
     "She clucks her tongue."
     W "“You refuse my hospitality?”"
@@ -191,7 +213,9 @@ label WraithChoiceBaby:
             $ renpy.notify("Violence +1\nApathy +1")
             "You snatch the baby from Glen’s arms. The child squirms in your hold."
             H "“Them. Take them.”"
-            "You shove Glen forward, drawing a broken sound from their throat."
+            show glenmirror at center
+            with Dissolve(.3)
+            "You shove Glen forward, drawing a broken sound from their throat."            
             G "“Harper! No, please!”"
             "The woman cackles in delight and her shadowy cage retreats." 
             "Before Glen can stagger away, the woman winds her arms around them."
@@ -215,6 +239,8 @@ label WraithChoiceBaby:
             $ renpy.notify("Violence +1")
             "You snatch the baby from Glen’s arms. The child squirms and whimpers in your hold."
             H "“Take this!”"
+            show babe at center
+            with Dissolve(.3)
             G "“Harper!” Glen gasps."
             "The woman smiles, toothy and vicious. She holds out her hands to receive the baby."
             "Glen scrambles to take it back, but you dodge their reach."
@@ -241,6 +267,8 @@ label WraithChoiceBaby:
             "The infant clings to Glen, tiny fist grasping clothes, tiny cry growing smaller in the frigid circle."
             "You swallow and muster your courage."
             H "“Take me.”"
+            show harper at right:
+                linear .5 center
             "The woman looks amused, her grin a twisted thing."
             "She slithers close to you, winds her arms around your body, kisses your nose."
             G "“Harper, no!” Glen sobs."
@@ -290,6 +318,8 @@ label WraithChoice:
             $ pacifism -= 1
             $ renpy.notify("Violence +1\nApathy +1")
             H "“Them. Take them.”"
+            show glenmirror at center
+            with Dissolve(.3)
             "You shove Glen forward, drawing a broken sound from their throat."
             G "“Harper! No, please!”"
             "The woman cackles in delight and her shadowy cage retreats." 
@@ -317,6 +347,8 @@ label WraithChoice:
             "You look at Glen, huddled and shivering in its malevolent cloud."
             "You swallow and muster your courage."
             H "“Take me.”"
+            show harper at right:
+                linear .5 center
             "The woman looks amused, her grin a twisted thing."
             "She slithers close to you, winds her arms around your body, kisses your nose."
             G "“Harper, no!” Glen sobs."

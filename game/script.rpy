@@ -9,16 +9,24 @@ image bgAct1 = "/images/Backgrounds/act_1_bg.png"
 image bgAct2 = "/images/Backgrounds/act_2_bg.png"
 image bgAct3 = "/images/Backgrounds/act_3_bg.png"
 image bgFlame = "/images/Backgrounds/flame_bg.png"
+image bgCave = "/images/Backgrounds/cave_bg.png"
 
 # Declare Sprites
 image harper = "/images/Characters/harper_sprite.png"
 image glen = "/images/Characters/glen_sprite.png"
 image glenbabe = "/images/Characters/glen_sprite_bab.png"
+image glenchange = "/images/Characters/glen_changeling_sprite.png"
+image glenmirror = "/images/Characters/glen_sprite_mirror.png"
 image merchant = "/images/Characters/the_merchant_sprite.png"
 image babe = "/images/Characters/BABEE.png"
 image box = "/images/Characters/box_sprite.png"
 image lost = "/images/Characters/the_lost_sprite.png"
 image flame = "/images/Characters/fire_sprite.png"
+image crowd = "/images/Characters/crowd_sprite.png"
+image crowdt = "/images/Characters/crowd_sprite_transparent.png"
+image snake = "/images/Characters/kind_of_upsetting_sprite.png"
+image woman = "/images/Characters/monster_lady_sprite.png"
+
 
 image title = "/images/Backgrounds/title_sprite.png"
 
@@ -35,7 +43,7 @@ define L = Character("Lost")
 define M = Character("Merchant")
 define S = Character("Stranger")
 define W = Character("Woman")
-
+define V = Character("Village Elder")
 
 
 # The game starts here.
