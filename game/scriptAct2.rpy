@@ -178,7 +178,7 @@ label Voices2:
             "You swear you feel fingers in your hair..."
                     
         "Scream and lash out":
-            $ pacisfism -= 1
+            $ pacifism -= 1
             $ empathy += 1
             $ renpy.notify("Violence +1\nEmpathy +1")
             "It’s too much."

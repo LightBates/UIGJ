@@ -1,7 +1,7 @@
 # The script of the game goes in this file.
 
-init python:
-    import math
+#init python:
+   # import math
 
 
 # Declare Background Images
