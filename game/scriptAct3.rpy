@@ -234,6 +234,9 @@ label WraithChoiceBaby:
             "You clutch the infant. You run."
             "Behind you, before you get too far, you hear Glen’s voice, carried on the wood’s anemic breeze."
             G "\"Harper, why?\""
+            hide glen
+            hide woman
+            with dissolve
             "..."
             "....."
             "................"
@@ -339,6 +342,9 @@ label WraithChoice:
             "You run."
             "Behind you, before you get too far, you hear Glen’s voice, carried on the wood’s anemic breeze."
             G "\"Harper, why?\""
+            hide glen
+            hide woman
+            with dissolve
             "..."
             "....."
             "................"
