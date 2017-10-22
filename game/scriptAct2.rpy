@@ -103,10 +103,10 @@ label Voices:
     G "“But the forest— they thought her lost beyond the trees. Perhaps, well perhaps— like us.”"
     if HasBaby:
         hide glenbabe 
-        with Dissolve(5.0)
+        with Dissolve(1.0)
     else:
         hide glen
-        with Dissolve(5.0)
+        with Dissolve(1.0)
     "You remember."
     "The bits of her dress, shredded through the tangles of branches."
     "The smell of burnt bread."

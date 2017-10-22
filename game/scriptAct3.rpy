@@ -1,5 +1,5 @@
 label Flame: 
-    $ Act2Scenes.pop(nex)
+    $ Act3Scenes.pop(nex)
     scene bgFlame
     with Fade(1.0, 1.0, 1.0)
     "It’s dark, so dark in the center of the forest."
@@ -76,7 +76,7 @@ label Flame:
             jump EndScene
 
 label TwoGlens:
-    $ Act2Scenes.pop(nex)
+    $ Act3Scenes.pop(nex)
     scene bgAct3
     with Fade(1.0, 1.0, 1.0)
     "The forest runs deep, endless. It’s impossible to say how long you’ve been here, impossible to say how you might get out."
@@ -117,7 +117,7 @@ label TwoGlens:
                 else:
                     "You walk slowly to the right Glen, and draw the knife. The vines are tight against them, but the knife severs them easily."
                 hide glen 
-                with Dissolve(5.0)
+                with Dissolve(1.0)
                 G "Glen’s tears return in full force as they hug you. “Please d-don’t leave me here.”"
                 G "The other Glen struggles. “No! No, let me go! I don’t belong here! Take me back! Take me home!”"
                 "You turn your back on them."
@@ -135,7 +135,7 @@ label TwoGlens:
                     "You kneel by the struggling Glen, and draw the knife. They freeze at the sight of it, eyes wide with terror."
                 "As you cut the struggling Glen’s bonds, they stare at the other, who is becoming increasingly desperate."
                 hide glenmirror
-                with Dissolve(5.0)
+                with Dissolve(1.0)
                 G "“It wasn’t not my fault! It was them! They switched us! Harper no, I love you!”"
                 H "You’ve made your choice. “Let’s go, Glen.”"
                 G "“Thank you. Thank you, Harper. I promise. I promise I won’t ever leave you again.”"
@@ -161,7 +161,7 @@ label TwoGlens:
 
 
 label Wraith:
-    $ Act2Scenes.pop(nex)
+    $ Act3Scenes.pop(nex)
     scene bgAct3
     with Fade(1.0, 1.0, 1.0)
     
