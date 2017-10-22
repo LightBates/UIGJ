@@ -595,7 +595,7 @@ screen Credits():
             text _("Suzee \"Sounds Like We’re Going to the Baby Zone\" Goodman\n")
             text _("\n\n\nMusic: {a=http://freemusicarchive.org/music/Kosta_T/Soul_Sand/Kosta_T_-_Soul_Sand_-_12_Complect_for_}Complect for ....{/a} by {a=http://freemusicarchive.org/music/Kosta_T/}Kosta T{/a}\n")
             text _("Used Under Creative Commons {a=https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode}(CC BY-NC-SA 4.0){/a}\n")
-            
+            text _("{a=http://www.gutenberg.org/files/1934/1934-h/1934-h.htm}\"On the Echoing Green\" by William Blake’s {i}Songs of Innocence and Experience{/i}{/a}\n")
             
 ## This is redefined in options.rpy to add text to the about screen.
 define gui.credits = ""
