@@ -80,7 +80,7 @@ label Voices:
     with Fade(1.0, 1.0, 1.0)
     "It’s the cool, damp. It seeps through your skin and settles somewhere along the bones."
     "Glen notices it as surely as you, tugging their clothes closer and hitching their shoulders as though that might shield."
-    scene bgCave
+    #scene bgCave
     "You stop to study the sensation, to look for clouds darkening the canopy, a lake reflecting a colder breeze."
     "You find a cave, or the mouth of it. It yawns in the distance — an open maw through which no light breaks — and... breathes?"
     C "“Harper, sweet. Could it be?”"
