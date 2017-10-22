@@ -230,7 +230,7 @@ label Alone:
     "You wail and wail and wail for hours, months, decades, until your voice crumbles like the fairy circle to dust."
     "The walls close in. There is nothing left."
     "You are alone."
-
+    return
     
     
 label AloneBaby:
@@ -268,4 +268,5 @@ label AloneBaby:
     "Glen is gone"
     "..."
     "The monstrous swarm descends."
+    return
 

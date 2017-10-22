@@ -156,7 +156,10 @@ label TwoGlens:
                 with dissolve
                 "Soon enough, you can’t hear them anymore."
                 $ Alone = True
-                ### WHERE TO GO WHEN ALONE?
+                if HasBaby:
+                    jump AloneBaby
+                else:
+                    jump Alone
                 return
 
 
@@ -233,8 +236,7 @@ label WraithChoiceBaby:
             pause 5
             "You are alone now."
             $ Alone = True
-            ###WHERE TO GO WHEN ALONE?
-            return
+            jump AloneBaby
             
         "Offer the Baby":
             $ pacifism -= 1
@@ -338,8 +340,7 @@ label WraithChoice:
             pause 5
             "You are alone now."
             $ Alone = True
-            ### WHERE TO GO WHEN ALONE
-            return
+            jump Alone
             
         "Offer yourself":
             $ empathy += 1
