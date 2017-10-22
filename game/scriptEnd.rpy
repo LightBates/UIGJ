@@ -22,7 +22,7 @@ label EndScene:
                 "Glen nods back."
                 "They ease the infant into the arms of the awaiting figure."
                 Cr "\"Thank you\" the crowd murmurs." 
-                "The rusting roars around you once again and you snap your hands up to cover you ears against it."
+                "The rustling roars around you once again and you snap your hands up to cover you ears against it."
                 "Soon enough, they are all gone. You take Glen’s hand."
             "Fight Back":
                 $ renpy.notify("Violence +1")

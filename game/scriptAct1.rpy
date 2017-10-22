@@ -108,7 +108,7 @@ label Merchant:
     show merchant at center
     with dissolve
     M "\"Aha! Oh my. Look at the heft of you two.\""
-    "His gaze is more than assessing, it scores against your skin as the beady black flit from you to Glen and back again. "
+    "His gaze is more than assessing, it scores against your skin as the beady black eyes flit from you to Glen and back again. "
     show merchant at center:
         linear .5 right
     pause .5
@@ -153,8 +153,8 @@ label Merchant:
             M "\"There are no returns. Your friend can make another deal, only this I can do.\"" 
             "Glen keeps an eye on you, as you keep an eye on the merchant, but steps forward nonetheless. This time, their movements are more deliberate, measured, concise."
             "They take their time as they examine every item, hands hovering before making their move."
-            "A sack, piecemeal marred with too large stitching. It jerks and struggles as its hefted. A low, lethargic wail is muffled by the confines."
-            "As soon as the bag clears the cart, the merchant smiles, raspy laugh reverberating around the forest floor as he starts to fade away."
+            "A sack, piecemeal marred with too large stitching. It jerks and struggles as it’s hefted. A low, lethargic wail is muffled by the confines."
+            "As soon as the bag clears the cart, the merchant smiles, a raspy laugh reverberating around the forest floor as he starts to fade away."
             M "\"A price is paid then. Good business. Good, good business.\""
             "He’s gone. Before you can decide whether or not to make another move, he’s gone. His wares, his cart. All that’s left, a sack that Glen opens, to the cries of a child."
             $ HasBaby = True

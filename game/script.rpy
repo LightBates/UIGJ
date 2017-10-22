@@ -126,7 +126,6 @@ label start:
             
     "Glen smiles at you, that smile that’s so sure the grass is always greener, and takes your hand."
     hide glen
-    with dissolve
     hide harper
     with dissolve
     "You believe there might be something better out there, something brighter, something magic."

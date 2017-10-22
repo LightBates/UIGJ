@@ -16,17 +16,21 @@ label Flame:
     with dissolve
     "A boy, a girl, a creature, a flame. Caught in a jar. It bats at the glass, curious face tipped to watch its voyeurs back."
     "Tap, tap, tap. Shift, hiss, crackle."
-    "Despite the burn, no smoke gathers to cloud the view. This thing, it’s white-hot at the center, molten, throwing off coronas of light and warmth."
+    "Despite the burn, no smoke gathers to cloud the view. This thing, white-hot at the center, molten, throwing off coronas of light and warmth..."
     F "\"Out. Out!\""
     F "It taps the glass, shifts, pools against the edge and burns."
     show flame at center:
         linear .5 right
     pause .5
-    show glen at left
-    with dissolve
+    if HasBaby:
+        show glenbabe at left
+        with dissolve
+    else:
+        show glen at left
+        with dissolve
     G "\"We have to let it out, don’t we? It’s not right to leave it like this.\""
     "Glen moves to approach the jar, and the dark almost seems to deepen, the shadows trying their best to press against every inch the light will give."
-    "Tendrils reach out like fingers, trees creaking and moaning, groaning, begging ‘no.’"  
+    "Tendrils reach out like fingers, trees creaking and moaning, groaning, begging ’no.’"  
     "As Glen’s hand gets closer, the creature ignites, filling its container, cackling, crackling." 
     "They hesitate." 
     F "\"No! Out! Burn, forest burn. Trap me and I burn!\""
@@ -35,7 +39,7 @@ label Flame:
     G "Glen draws back and turns to look at you, worrying their lip between their teeth."
     "The creature growls, writhes with its impatience." 
     G "\"We can’t just walk away from it! Even if we wanted to, where would we go? Back out into that black? We’d never make it out.\""
-    "It felt like hours before they spotted this ember, a day- at least- to reach it."
+    "It felt like hours before they spotted this ember; a day, at least, to reach it."
     "What would they get just walking away? Would they ever see light again?"
     "The trapped thing wailed, pressing at every surface, every groove, desperate."
     
