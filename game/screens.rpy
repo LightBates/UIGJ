@@ -318,7 +318,7 @@ screen navigation():
 
         textbutton _("About") action ShowMenu("about")
         
-        textbutton _("Credits") action ShowMenu("credits")
+        textbutton _("Credits") action ShowMenu("Credits")
 
         if renpy.variant("pc"):
 
@@ -574,7 +574,7 @@ style about_label_text:
 
 ##Credits
 
-screen credits():
+screen Credits():
 
     tag menu
 
@@ -583,7 +583,7 @@ screen credits():
     ## screen.
     use game_menu(_("Credits"), scroll="viewport"):
 
-        style_prefix "credits"
+        style_prefix "Credits"
 
         vbox:
 
@@ -593,6 +593,8 @@ screen credits():
             text _("Light \"Can’t or Won’t?\" Bates\n")
             text _("Sam \"I’m Drawing The Baby If You Don’t Stop Me\" Wilson\n")
             text _("Suzee \"Sounds Like We’re Going to the Baby Zone\" Goodman\n")
+            text _("\n\n\nMusic: {a=http://freemusicarchive.org/music/Kosta_T/Soul_Sand/Kosta_T_-_Soul_Sand_-_12_Complect_for_}Complect for ....{/a} by {a=http://freemusicarchive.org/music/Kosta_T/}Kosta T{/a}\n")
+            text _("Used Under Creative Commons {a=https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode}(CC BY-NC-SA 4.0){/a}\n")
             
             
 ## This is redefined in options.rpy to add text to the about screen.
@@ -767,7 +769,7 @@ screen preferences():
                         style_prefix "radio"
                         label _("Display")
                         textbutton _("Window") action Preference("display", "window")
-#                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
 
                 #vbox:
                     #style_prefix "radio"

@@ -100,13 +100,23 @@ label Empathy:
     "It picks up out of nowhere, stirring the leaves and making the circle dance."
     "The rustle of the foliage sounds like whispers, sliding over and sluicing through each other."
     "They’re harsh enough to catch, to illicit the jerk of your head, but no matter how hard you listen, you can’t make out the words."
+    show glen at left
+    with dissolve
     "Glen starts to shake beside you, at first as though with a chill, but ever and ever harsher, until they’re convulsing in place, body bending unnaturally."
+    show harper at right
+    with dissolve
     H "\"Glen! GLEN!\""
     "You move to reach out to them, but find yourself rooted in place, vines grown over your ankles."
     "There are no thorns to bite into your flesh, but enough movement chafes them against your skin and causes it to itch and burn."
+    hide glen
+    show glenchange at left
+    with dissolve
     "Glen’s hood falls back to show their sharp face, their eyes turned milky white, their mouth agape as an ill moan grates out of it."
     "It seems to scrape down their throat, something half beast, with their gaze turned toward the canopy."
     "Something in your memory flickers, like a zoetrope dancing across your mind."
+    hide glenchange
+    hide harper
+    with dissolve
     G "\"It’s not- I don’t think I’m right, Harper.\""
     H "\"What does that mean?\""
     G "\"I’m not the way I should be.\""
@@ -164,10 +174,14 @@ label Violence:
     "You don’t know what will happen if you try to break the barrier, but you’re sure it won’t end well, if there’s anything to say for the sickly spores and effervescent toxins rotting the forest around you."
     "Even as you hold your ground, stay standing, the air grows thick enough to choke."
     "Lights dance around your eyes, vision being blotted out like a lit piece of flash paper."
+    show glen at left
+    with dissolve
     G "\"Harper! Don’t let go of me, now. Not yet. You can’t, I won’t let you.\""
     "You feel them shake at you, violent with their desperation."
     "Your teeth rattle in your skull and your neck lashes back and forth, dislodging something you didn’t know was stuck."
     "The memories pool into your mind, like blood against your skull."
+    hide glen
+    with dissolve
     "Father’s trusted knife, betraying him for the first and only time."
     G "\"Wipe your hands. Clean them well. We can’t let anyone see.\""
     G "\"Just have to make it to the woods without suspicion. No one will follow us there.\""

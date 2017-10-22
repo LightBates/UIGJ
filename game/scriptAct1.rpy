@@ -140,13 +140,13 @@ label Merchant:
     "The merchant squares himself towards you, fingers flexing, daring for a challenge."
     
     menu:
-        "(Brandish your knife) If blood for blood is the deal you’re wanting, I’d like my fair share.":
+        "Brandish your knife \"If blood for blood is the deal you’re wanting, I’d like my fair share.\"":
             $ pacifism -= 1
             $ empathy -= 1
             $ renpy.notify("Violence +1\nApathy +1")
             "The merchant squeals, nostrils flaring, hands raising up as it shuffles back, stumbling over its own feet as you advance."
         
-        "(Brandish your knife) Fair is fair, let Glen choose to make the sale.":
+        "Brandish your knife \"Fair is fair, let Glen choose to make the sale.\"":
             $ pacifism -= 1
             $ empathy += 1
             $ renpy.notify("Violence +1\nEmpathy +1")
@@ -159,7 +159,7 @@ label Merchant:
             "He’s gone. Before you can decide whether or not to make another move, he’s gone. His wares, his cart. All that’s left, a sack that Glen opens, to the cries of a child."
             $ HasBaby = True
             
-        "We should go, Glen. A bit of blood is hardly worth a fight.":
+        "\"We should go, Glen. A bit of blood is hardly worth a fight.\"":
             $ pacifism += 1
             $ empathy -= 1
             $ renpy.notify("Pacifism +1\nApathy +1")
@@ -168,7 +168,7 @@ label Merchant:
             "Glen doesn’t speak again, but this time, as they move forward, they go without you."
             "After a moment’s hesitation, you run after begging for a slower pace."
         
-        "Take mine instead then, now that we know the terms.":
+        "\"Take mine instead then, now that we know the terms.\"":
             $ pacifism += 1
             $ empathy += 1
             $ renpy.notify("Pacifism +1\nEmpathy +1")

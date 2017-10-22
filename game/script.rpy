@@ -105,27 +105,24 @@ label start:
     G "\"When has that ever stopped us before?\""
     
     menu:
-        "We should really listen to our parents.":
+        "\"We should really listen to our parents.\"":
             $ pacifism += 1
             $ renpy.notify("Pacifism +1")
-            H "\"We should really listen to our parents.\""
             G "\"You’re such a staunch, Harper.\""
             
-        "Right as always, dear.":
+        "\"Right as always, dear.\"":
             $ empathy -= 1
             $ renpy.notify("Apathy +1")
-            H "\"Right as always, dear."
             
-        "Aren’t you worried?":
+        "\"Aren’t you worried?\"":
             $ empathy += 1
             $ renpy.notify("Empathy +1")
-            H "\"Aren’t you worried?\""
             G "\"Aren’t {i}you{/i} excited?\""
             
-        "*Tap your belt where father’s trusted knife sits* I suppose we’re safe, no matter.":
+        "Tap your belt where father’s trusted knife sits \"I suppose we’re safe, no matter.\"":
             $ pacifism -= 1
             $ renpy.notify("Violence +1")
-            H "Your hand brushes against the knife’s handle and you grin confidently \"I suppose we’re safe no matter.\""
+            "Your hand brushes against the knife’s handle and you grin confidently."
             
     "Glen smiles at you, that smile that’s so sure the grass is always greener, and takes your hand."
     hide glen
