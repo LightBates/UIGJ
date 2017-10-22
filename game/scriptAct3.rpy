@@ -49,6 +49,7 @@ label Flame:
             "It rings you both, this inferno, travelling in concentric circles, devouring everything in its path."
             "If you squint your eyes against it, brace yourself among the heat and peer deep, deep into the distance, you imagine you can see your home— the pebble path, the cold creek, the edge of the forest."
             "As you burn."
+            return
             
         "Walk away":
             $ pacifism += 1
@@ -65,6 +66,7 @@ label Flame:
             G "“A trip, out into the forest. Never to return. They’ll tell stories about us, y’know? Just like your mother.”"
             G "“I think I’d like to be someone else’s fairytale.”" 
             "And so you walk. This time there’s no stress, no worry, no need to be somewhere else. Arm in arm, out into the dark, you have nothing but time."
+            jump EndScene
 
 label TwoGlens:
     $ Act2Scenes.pop(nex)
@@ -107,6 +109,7 @@ label TwoGlens:
                 G "Glen’s tears return in full force as they hug you. “Please d-don’t leave me here.”"
                 G "The other Glen struggles. “No! No, let me go! I don’t belong here! Take me back! Take me home!”"
                 "You turn your back on them."
+                jump EndScene
 
             "Free struggling Glen":
                 $ pacifism -= 2
@@ -123,6 +126,7 @@ label TwoGlens:
                 H "You’ve made your choice. “Let’s go, Glen.”"
                 G "“Thank you. Thank you, Harper. I promise. I promise I won’t ever leave you again.”"
                 "Glen hugs you, tighter than you ever remember. They smell of the forest."
+                jump EndScene
 
             "Leave":
                 $ pacifism -= 1
@@ -134,6 +138,9 @@ label TwoGlens:
                 "You turn back to the forest."
                 G "“Don’t leave me here! I don’t belong here! Take me back! Take me BACK!”"
                 "Soon enough, you can’t hear them anymore."
+                $ Alone = True
+                ### WHERE TO GO WHEN ALONE?
+                return
 
 
 label Wraith:
@@ -200,6 +207,8 @@ label WraithChoiceBaby:
             pause 5
             "You are alone now."
             $ Alone = True
+            ###WHERE TO GO WHEN ALONE?
+            return
             
         "Offer the Baby":
             $ pacifism -= 1
@@ -220,7 +229,8 @@ label WraithChoiceBaby:
             H "“We have to look out for one another, no matter what.” You swallow."
             H "“I’m sorry.”"
             "Glen, tearful, nods."
-            "Together you run into the awaiting dark."            
+            "Together you run into the awaiting dark."  
+            jump EndScene
             
         "Offer yourself":
             $ empathy += 1
@@ -245,6 +255,7 @@ label WraithChoiceBaby:
             "The writhing shadows curl around you once again, the magic sharper than before, more heady and with impossibly more weight."
             "As it creeps across your face, your eyes, you steal one last look at Glen darting away."
             "Safe. At least they will be safe."
+            return
             
         "Try to kill the woman-creature":
             ## POSSIBLE EXTRA BRANCH HERE - Fail if Violence is too low?
@@ -267,6 +278,7 @@ label WraithChoiceBaby:
             "You attack again, thrusting the knife into her neck with aim that’s half luck and half rage."
             "The woman lurches back. Her scream, a terrible inhuman void of a tone, shoots pain through and between your ears."
             "You pull out the knife, grab Glen’s hand and run as fast as you can."
+            jump EndScene
 
 label WraithChoice:
     "Dense and impenetrable, her shadow magic weighs on your shoulders, wraps around your throats."
@@ -294,6 +306,8 @@ label WraithChoice:
             pause 5
             "You are alone now."
             $ Alone = True
+            ### WHERE TO GO WHEN ALONE
+            return
             
         "Offer yourself":
             $ empathy += 1
@@ -317,6 +331,7 @@ label WraithChoice:
             "The writhing shadows curl around you once again, the magic sharper than before, more heady and with impossibly more weight."
             "As it creeps across your face, your eyes, you steal one last look at Glen darting away."
             "Safe. At least Glen will be safe."
+            return
             
         "Try to kill the woman-creature":
             ## POSSIBLE EXTRA BRANCH HERE - Fail if Violence is too low?
@@ -338,3 +353,4 @@ label WraithChoice:
             "You attack again, thrusting the knife into her neck with aim that’s half luck and half rage."
             "The woman lurches back. Her scream, a terrible inhuman void of a tone, shoots pain through and between your ears."
             "You pull out the knife, grab Glen’s hand and run as fast as you can."
+            jump EndScene
