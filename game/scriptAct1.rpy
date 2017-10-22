@@ -118,7 +118,7 @@ label Merchant:
     G "\"At us? At you! What a thing, what a wonderful, whimsical thing.\""
     "The merchant grins, teeth- oh the teeth."
     M "\"Come, come and look. More I have, if your eye is for such things.\""
-    "He stands aside, gestures his arms across the glowing bottles, stringed baubles, powders and liquids and… meats."
+    "He stands aside, gestures his arms across the glowing bottles, stringed baubles, powders and liquids and... meats."
     "Something shifts."
     "..."
     M "\"I trade in many things, many things. Find something you fancy, please.\""
@@ -235,7 +235,7 @@ label BirchBox:
             with dissolve
             "Glen’s footsteps approach. They hum a tune that tickles at your memory, but you can’t quite place it. You turn."
             "Glen stops short, gaze wide and watery on the infant you cradle."
-            G "\"Is that…?\""
+            G "\"Is that...?\""
             "You nod."
             "Glen shakes their head."
             G "\"Who would abandon a baby in the woods?\""
@@ -265,7 +265,7 @@ label BirchBox:
             show glen at left with dissolve
             "The baby stirs. Glen climbs down from their perch on the boulder and returns to your side."
             "They breathe a noise - a whimper - in shock and sympathy."
-            G "\"Is that…?\""
+            G "\"Is that...?\""
             "You nod and fold your arms, looking away from the child as it begins to wriggle."
             G "\"What should we do, Harper?\""
             "You shrug."

@@ -99,7 +99,7 @@ label Voices:
     C "\"Harper, sweet. Come and see me. Don’t you want to see your mother?\""
     "The voice drifts. It rides along that tepid gust, a breathy sigh."
     "It’s melodic, but discordant, like wind through holes in too smooth stone."
-    "It sounds… like her. So like her, sad and sweet and not sure she wants to be heard."
+    "It sounds... like her. So like her, sad and sweet and not sure she wants to be heard."
     G "\"But the forest- they thought her lost beyond the trees. Perhaps, well perhaps- like us.\""
     if HasBaby:
         hide glenbabe 
