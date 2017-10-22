@@ -25,6 +25,8 @@ label EndScene:
           
     ###Might need rework compared to all the other endings
 label Apathy:
+    scene bgFaerie
+    with Fade(1.0, 1.0, 1.0)
     "Nothing matters. There is no horror, no specter they can bring before you that will bring fear or hesitation into your heart."
     "Nothing in this forest has fazed you, and nothing ever will."
     "Even if you are to wander here forever. Even if Glen is to waste away beside you, their hand slipping from yours one last time."
@@ -32,6 +34,8 @@ label Apathy:
     return
 
 label Empathy:
+    scene bgFaerie
+    with Fade(1.0, 1.0, 1.0)
     "And suddenly, a room."
     "You’re not sure how you know it’s a room— the landscape still stretches for interminable miles in every direction— but you feel the confines."
     "You and Glen."
@@ -88,6 +92,8 @@ label Empathy:
     
 
 label Violence:
+    scene bgFaerie
+    with Fade(1.0, 1.0, 1.0)
     "And suddenly, a room."
     "You’re not sure how you know it’s a room— the landscape still stretches for interminable miles in every direction— but you feel the confines."
     "You and Glen."
@@ -129,6 +135,8 @@ label Violence:
     
     
 label Pacifism:
+    scene bgFaerie
+    with Fade(1.0, 1.0, 1.0)
     "And suddenly, a room."
     "You’re not sure how you know it’s a room— the landscape still stretches for interminable miles in every direction— but you feel the confines."
     "You and Glen."

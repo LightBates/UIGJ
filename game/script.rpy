@@ -10,6 +10,7 @@ image bgAct2 = "/images/Backgrounds/act_2_bg.png"
 image bgAct3 = "/images/Backgrounds/act_3_bg.png"
 image bgFlame = "/images/Backgrounds/flame_bg.png"
 image bgCave = "/images/Backgrounds/cave_bg.png"
+image bgFaerie = "/images/Backgrounds/faerie_bg.png"
 
 # Declare Sprites
 image harper = "/images/Characters/harper_sprite.png"

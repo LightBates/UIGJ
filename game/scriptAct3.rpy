@@ -85,7 +85,6 @@ label TwoGlens:
     H "“Glen?” Again, louder, firmer."
     G "“Over here!” Glen’s voice comes from ahead, echoing. You wonder how they got in front of you."
     show glen at left
-    with dissolve
     show glenmirror at right
     with dissolve
     "You part the branches again, and see the scene, mirrored. Glen wrapped in vines, tied to a stump and next to them... Glen is wrapped in vines, tied to a stump."
@@ -152,6 +151,9 @@ label TwoGlens:
                 G "The struggling Glen stops, and looks at the other, disbelieving. “No... No, this isn’t—it isn’t right!”"
                 "You turn back to the forest."
                 G "“Don’t leave me here! I don’t belong here! Take me back! Take me BACK!”"
+                hide glen
+                hide glenmirror
+                with dissolve
                 "Soon enough, you can’t hear them anymore."
                 $ Alone = True
                 ### WHERE TO GO WHEN ALONE?

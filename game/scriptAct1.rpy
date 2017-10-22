@@ -3,12 +3,15 @@ label Treasure:
     scene bgAct1
     with Fade(1.0, 1.0, 1.0)
     $ Act1Scenes.pop(nex)
-    "Another clearing opened before them. You walk toward the center, looking for another path out."
+    "A clearing opens before you. You walk toward the center, looking for another path out."
     show glen at left
+    with dissolve
     G "“Harper, someone’s coming!” Glen whispers, pulling your sleeve. Rustling interrupts the soft silence of the forest."
     show harper at right
+    with dissolve
     H "“Did they follow us?” you whisper back, turning to the sound."
     show lost at center
+    with dissolve
     "A gaunt figure emerges from the brush, staggering. Glen gasps."
     G "“Harper, I think they’re hurt!”"
     "It’s true. It’s a man, or something that looks like one. He’s covered in dirt, and can barely walk."
@@ -24,20 +27,24 @@ label Treasure:
             $ renpy.notify("Pacifism +1\nApathy +1")
             H "“Hurry.” You get closer, taking care not to hurt him as the two of you lift his arms onto your shoulders."
             hide lost
+            with dissolve
             H "“In the bushes.” You ease him down into the shade of the bushes, while Glen pushes the dirt around with their boot, trying to hide the man’s footprints."
             hide glen
-            # show crowd left
+            hide harper
+            show crowdt at center
+            with dissolve
             "A crowd emerges from the brush. Their eyes fall upon you."
             Cr "“Where is our treasure?” they ask as one."
             H "“Not here,” you respond evenly, trying to keep your voice from shaking."
             "They spread through the clearing in an elegant wave of shapes, but do not see him."
-            # show crowd at left:
-                #linear .5 right
-            show glen left
+            #show glen left
             G "“What are you going to do if you find him?” Glen asks."
             "They level their gazes on Glen, who you shoot a glare. You hadn’t said it was a “him”."
             Cr "They respond nonetheless. “We will reclaim what is ours.”"
-            # hide crowd
+            hide crowdt
+            with dissolve
+            show glen at left
+            with dissolve
             "Without another word, they return between the branches of the forest."
             G "Glen tugs at your sleeve, frozen until now. “We have to get out of here, Harper. C’mon, please.”"
             "You look back at the shadow under the bush, as Glen drags you away. The man begins to cry, and a baby’s voice joins his."
