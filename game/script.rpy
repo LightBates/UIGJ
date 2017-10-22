@@ -25,15 +25,16 @@ image title = "/images/Backgrounds/title_sprite.png"
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define C = Character("Cave")
-define F = Character("Flame")
-define H = Character("Harper")
-define G = Character("Glen")
-define Cr = Character("Crowd")
-define L = Character("Lost")
 define B = Character("Baby")
+define C = Character("Cave")
+define Cr = Character("Crowd")
+define F = Character("Flame")
+define G = Character("Glen")
+define H = Character("Harper")
+define L = Character("Lost")
 define M = Character("Merchant")
 define S = Character("Stranger")
+define W = Character("Woman")
 
 
 
