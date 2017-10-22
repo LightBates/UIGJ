@@ -140,13 +140,13 @@ label Merchant:
     "The merchant squares himself towards you, fingers flexing, daring for a challenge."
     
     menu:
-        "*Brandish your knife* If blood for blood is the deal you’re wanting, I’d like my fair share.":
+        "(Brandish your knife) If blood for blood is the deal you’re wanting, I’d like my fair share.":
             $ pacifism -= 1
             $ empathy -= 1
             $ renpy.notify("Violence +1\nApathy +1")
             "The merchant squeals, nostrils flaring, hands raising up as it shuffles back, stumbling over its own feet as you advance."
         
-        "*Brandish your knife* Fair is fair, let Glen choose to make the sale.":
+        "(Brandish your knife) Fair is fair, let Glen choose to make the sale.":
             $ pacifism -= 1
             $ empathy += 1
             $ renpy.notify("Violence +1\nEmpathy +1")
